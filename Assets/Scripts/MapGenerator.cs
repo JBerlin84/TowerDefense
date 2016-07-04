@@ -62,6 +62,7 @@ public class MapGenerator : MonoBehaviour {
 				Vector3 tilePosition = CoordinateToPosition (x, y);
 				Transform newTile = Instantiate (tilePrefab, tilePosition, Quaternion.Euler (Vector3.right * 90)) as Transform;
 				newTile.localScale = Vector3.one * (1 - outline);
+
 				newTile.parent = mapHolder;
 			}
 		}
