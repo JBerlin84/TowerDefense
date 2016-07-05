@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// The code handling the entrance portal to the world.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class EntrancePortal : MonoBehaviour {

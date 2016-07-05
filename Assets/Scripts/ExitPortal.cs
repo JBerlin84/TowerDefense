@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// The code handling the exit portal from the world.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ExitPortal : MonoBehaviour {
@@ -11,5 +15,11 @@ public class ExitPortal : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if(other.tag.Equals("Enemy")) {
+			Destroy (other.gameObject);
+		}
 	}
 }

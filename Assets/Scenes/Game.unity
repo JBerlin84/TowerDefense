@@ -13469,28 +13469,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 576681257}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &581063791 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 152374, guid: 7de4663f47c55344988b68298df555b4, type: 2}
-  m_PrefabInternal: {fileID: 581558175}
---- !u!114 &581063792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 581063791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d947adf008d48834ba3c9ec52dc731ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - enemyCount: 5
-    timeBetweenSpawns: 1
-    enemy: {fileID: 11480250, guid: 9be92b0d839e753449024b23b8e6dc3e, type: 2}
-  - enemyCount: 10
-    timeBetweenSpawns: 0.75
-    enemy: {fileID: 11480250, guid: 9be92b0d839e753449024b23b8e6dc3e, type: 2}
 --- !u!1001 &581558175
 Prefab:
   m_ObjectHideFlags: 0
