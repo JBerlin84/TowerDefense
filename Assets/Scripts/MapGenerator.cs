@@ -20,8 +20,6 @@ public class MapGenerator : MonoBehaviour {
 	[Range(0,1)]
 	public float outline;
 
-	//List<Coord> tileCoordinates;
-
 	void Start() {
 		GenerateMap ();
 	}
@@ -39,6 +37,9 @@ public class MapGenerator : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// The four different possible rotations.
+	/// </summary>
 	enum Rotation {
 		Up, Down, Left, Right
 	}
@@ -127,29 +128,21 @@ public class MapGenerator : MonoBehaviour {
 			entrance.Add (new Coord (x, y + dy));
 			entrance.Add (new Coord (x + 1, y + dy));
 			entrance.Add (new Coord (x - 1, y + dy));
-			/*if (r == Rotation.Up) {
-				entrance.Add (new Coord (x + 1, y + dy + 1));
-				entrance.Add (new Coord (x - 1, y + dy + 1));
-			} else {
-				entrance.Add (new Coord (x + 1, y + dy - 1));
-				entrance.Add (new Coord (x - 1, y + dy - 1));
-			}*/
 		} else {
 			entrance.Add (new Coord (x + dx, y));
 			entrance.Add (new Coord (x + dx, y + 1));
 			entrance.Add (new Coord (x + dx, y - 1));
-			/*if (r == Rotation.Left) {
-				entrance.Add (new Coord (x + dx - 1, y + 1));
-				entrance.Add (new Coord (x + dx - 1, y - 1));
-			} else {
-				entrance.Add (new Coord (x + dx + 1, y + 1));
-				entrance.Add (new Coord (x + dx + 1, y - 1));
-			}*/
 		}
 
 		return entrance;
 	}
 
+	/// <summary>
+	/// Translates an x,y coordinate to a Vector3 position.
+	/// </summary>
+	/// <returns>Vector3 representing the x,y coordinate.</returns>
+	/// <param name="x">The x coordinate.</param>
+	/// <param name="y">The y coordinate.</param>
 	Vector3 CoordinateToPosition(int x, int y) {
 		return new Vector3 (-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y);
 	}

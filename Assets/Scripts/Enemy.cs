@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Enemy class
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -15,7 +19,6 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		// Maybe we should not do this as often as it is now.
 		pathfinder.SetDestination (target.position);
 	}

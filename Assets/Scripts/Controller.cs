@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controller class for the level
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class Controller : MonoBehaviour {
@@ -34,6 +38,11 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Convert a mouse point coord to a definitive tile coordinate.
+	/// </summary>
+	/// <returns>The to tile coordinate.</returns>
+	/// <param name="point">Point to convert</param>
 	Vector3 PointToTileCoord(Vector3 point) {
 		point.x = Mathf.Round (point.x);
 		point.y = Mathf.Round (point.y);
