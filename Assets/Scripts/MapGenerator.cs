@@ -14,8 +14,8 @@ public class MapGenerator : MonoBehaviour {
 	public Vector2 mapSize = new Vector2(10, 10);
 	public string holderName = "Generated Map";
 
-	public Vector2 positionEntrance;
-	public Vector2 positionExit;
+	public Coord positionEntrance;
+	public Coord positionExit;
 
 	[Range(0,1)]
 	public float outline;
@@ -27,6 +27,7 @@ public class MapGenerator : MonoBehaviour {
 	/// <summary>
 	/// Map coordinate.
 	/// </summary>
+	[System.Serializable]
 	public struct Coord	{
 		public int x;
 		public int y;

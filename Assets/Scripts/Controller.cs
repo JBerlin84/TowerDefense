@@ -27,13 +27,10 @@ public class Controller : MonoBehaviour {
 			point = PointToTileCoord (point);
 
 			Debug.DrawLine (ray.origin, point, Color.red);
-			print (point);
 
 			if (Input.GetMouseButtonUp (0)) {
 				Transform newTower = Instantiate (enemy) as Transform;
 				newTower.transform.position = point;
-				Tree tree = newTower.GetComponent<Tree> ();
-
 			}
 		}
 	}
