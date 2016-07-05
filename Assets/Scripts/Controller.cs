@@ -28,14 +28,16 @@ public class Controller : MonoBehaviour {
 			if (Input.GetMouseButtonUp (0)) {
 				Transform newTower = Instantiate (enemy) as Transform;
 				newTower.transform.position = point;
+				Tree tree = newTower.GetComponent<Tree> ();
+
 			}
 		}
 	}
 
 	Vector3 PointToTileCoord(Vector3 point) {
-		point.x = Mathf.Floor (point.x);
-		point.y = Mathf.Floor (point.y);
-		point.z = Mathf.Floor (point.z);
+		point.x = Mathf.Round (point.x);
+		point.y = Mathf.Round (point.y);
+		point.z = Mathf.Round (point.z);
 
 		return point;
 	}
