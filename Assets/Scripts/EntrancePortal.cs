@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Transform))]
-public class Spawner : MonoBehaviour {
+public class EntrancePortal : MonoBehaviour {
 
 	public Wave[] waves;
 	Wave currentWave;
