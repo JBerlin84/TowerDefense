@@ -4,6 +4,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour {
 
@@ -42,7 +43,7 @@ public class Controller : MonoBehaviour {
 		// If escape is pressed, exit
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.Quit ();
+			SceneManager.LoadScene ("Menu");
 		}
 	}
 
