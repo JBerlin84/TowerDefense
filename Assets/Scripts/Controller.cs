@@ -16,6 +16,9 @@ public class Controller : MonoBehaviour {
 	}
 
 	void Update () {
+
+		CheckInput();
+
 		// Get the position of the gameboard we are pointing at.
 		Ray ray = viewCamera.ScreenPointToRay (Input.mousePosition);
 		Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
@@ -32,6 +35,14 @@ public class Controller : MonoBehaviour {
 				Transform newTower = Instantiate (enemy) as Transform;
 				newTower.transform.position = point;
 			}
+		}
+	}
+
+	void CheckInput() {
+		// If escape is pressed, exit
+		// TODO: This should probably be a game menu of some sort.
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			Application.Quit ();
 		}
 	}
 
