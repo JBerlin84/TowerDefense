@@ -70,19 +70,12 @@ public class MapGenerator : MonoBehaviour {
 		}
 
 		// Create entrance and exit portals
-		List<Coord> entrance = generatePortal ((int)positionEntrance.x, (int)positionEntrance.y, Rotation.Down);
-		for (int i = 0; i < entrance.Count; i++) {
-			Vector3 pos = CoordinateToPosition (entrance[i].x, entrance[i].y);
-			Transform framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
-			framePiece.parent = mapHolder;
-		}
+		//TODO: Rotation should not be hard coded here.
+		//TODO: The portals should also be created here.
+		CreatePortal(positionEntrance, Rotation.Down, mapHolder);
+		CreatePortal(positionExit, Rotation.Up, mapHolder);
 
-		List<Coord>exit = generatePortal ((int)positionExit.x, (int)positionExit.y, Rotation.Up);
-		for (int i = 0; i < exit.Count; i++) {
-			Vector3 pos = CoordinateToPosition (exit[i].x, exit[i].y);
-			Transform framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
-			framePiece.parent = mapHolder;
-		}
+		//CreateFrame (mapHolder);
 
 		// Create the frame
 		for (int x = 0; x < mapSize.x; x++) {
@@ -99,13 +92,53 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Creates the frame for the game board.
+	/// </summary>
+	/// <param name="mapHolder">Map holder.</param>
+	/*
+	private void CreateFrame(Transform mapHolder) {
+		Vector3 pos = new Vector3 (-Mathf.Floor(mapSize.x / 2), 0);
+		Transform framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
+		framePiece.localScale = new Vector3 (1, 1, mapSize.y);
+		framePiece.parent = mapHolder;
+
+		// Right wall
+		pos = new Vector3 (Mathf.Floor(mapSize.x / 2), 0);
+		framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
+		framePiece.localScale = new Vector3 (1, 1, mapSize.y);
+		framePiece.parent = mapHolder;
+
+		// Left wall
+		pos = new Vector3 (0, 0, -Mathf.Floor(mapSize.y / 2));
+		framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
+		framePiece.localScale = new Vector3 (mapSize.x, 1, 1);
+		framePiece.parent = mapHolder;
+
+		// Right wall
+		pos = new Vector3 (0, 0, Mathf.Floor(mapSize.y / 2));
+		framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
+		framePiece.localScale = new Vector3 (mapSize.x, 1, 1);
+		framePiece.parent = mapHolder;
+	}*/
+
+	private void CreatePortal(Coord position, Rotation rotation, Transform mapHolder) {
+		List<Coord> entrance = generatePortalCoords (position.x, position.y, rotation);
+		for (int i = 0; i < entrance.Count; i++) {
+			Vector3 pos = CoordinateToPosition (entrance[i].x, entrance[i].y);
+			Transform framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
+			framePiece.parent = mapHolder;
+		}
+
+	}
+
+	/// <summary>
 	/// Generates a portal in given position and direction
 	/// </summary>
 	/// <returns>List of coordinates for the portal.</returns>
 	/// <param name="x">The x coordinate.</param>
 	/// <param name="y">The y coordinate.</param>
 	/// <param name="r">The rotation the opening should be heading.</param>
-	private List<Coord> generatePortal(int x, int y, Rotation r) {
+	private List<Coord> generatePortalCoords(int x, int y, Rotation r) {
 		int dx = 0;
 		int dy = 0;
 
@@ -124,18 +157,18 @@ public class MapGenerator : MonoBehaviour {
 			break;
 		}
 			
-		List<Coord> entrance = new List<Coord> ();
+		List<Coord> coords = new List<Coord> ();
 		if (r == Rotation.Up || r == Rotation.Down) {
-			entrance.Add (new Coord (x, y + dy));
-			entrance.Add (new Coord (x + 1, y + dy));
-			entrance.Add (new Coord (x - 1, y + dy));
+			coords.Add (new Coord (x, y + dy));
+			coords.Add (new Coord (x + 1, y + dy));
+			coords.Add (new Coord (x - 1, y + dy));
 		} else {
-			entrance.Add (new Coord (x + dx, y));
-			entrance.Add (new Coord (x + dx, y + 1));
-			entrance.Add (new Coord (x + dx, y - 1));
+			coords.Add (new Coord (x + dx, y));
+			coords.Add (new Coord (x + dx, y + 1));
+			coords.Add (new Coord (x + dx, y - 1));
 		}
 
-		return entrance;
+		return coords;
 	}
 
 	/// <summary>
