@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour {
 	float nextPathFinding;
 
 	[Header("Enemy variables")]
+	public int value;
 	public int hp;
 	public int speed;
 	public float scale;
