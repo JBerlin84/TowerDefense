@@ -9,11 +9,14 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour {
 
 	Camera viewCamera;
+	bool isPaused;
 
 	public Transform enemy;
+	public GameObject pauseMenu;
 
 	void Start () {
 		viewCamera = Camera.main;
+		isPaused = false;
 	}
 
 	void Update () {
@@ -39,18 +42,30 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Handles key inputs from the user.
+	/// </summary>
 	void CheckInput() {
+		print ("is being called");
 		// If escape is pressed, exit
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			SceneManager.LoadScene ("Menu");
+			if (isPaused) {
+				Time.timeScale = 1f;
+				pauseMenu.SetActive (false);
+				isPaused = false;
+			} else {
+				Time.timeScale = 0f;
+				pauseMenu.SetActive (true);
+				isPaused = true;
+			}
 		}
 	}
 
 	/// <summary>
 	/// Convert a mouse point coord to a definitive tile coordinate.
 	/// </summary>
-	/// <returns>The to tile coordinate.</returns>
+	/// <returns>The two tile coordinate.</returns>
 	/// <param name="point">Point to convert</param>
 	Vector3 PointToTileCoord(Vector3 point) {
 		point.x = Mathf.Round (point.x);
