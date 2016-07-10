@@ -3,19 +3,39 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour {
+	public GameObject menuPanel;
 	public GameObject mainMenuLayout;
 	public GameObject graphicsOptionsLayout;
 	public GameObject audioOptionsLayout;
 	public GameObject quitMenuLayout;
 
-	void OnEnable() {
+	bool isDisplaying;
+
+	public bool IsDisplaying {
+		get {
+			return isDisplaying;
+		}
+	}
+
+	public void Display() {
+		isDisplaying = true;
+		menuPanel.SetActive (true);
 		mainMenuLayout.SetActive(true);
 		graphicsOptionsLayout.SetActive(false);
 		audioOptionsLayout.SetActive(false);
 		quitMenuLayout.SetActive(false);
 	}
 
-	void OnDisable() {
+	public void Close() {
+		isDisplaying = false;
+		menuPanel.SetActive (false);
+		mainMenuLayout.SetActive(false);
+		graphicsOptionsLayout.SetActive(false);
+		audioOptionsLayout.SetActive(false);
+		quitMenuLayout.SetActive(false);
+	}
+
+	void Back() {
 		mainMenuLayout.SetActive(false);
 		graphicsOptionsLayout.SetActive(false);
 		audioOptionsLayout.SetActive(false);
@@ -24,13 +44,13 @@ public class PauseMenu : MonoBehaviour {
 
 	//TODO: How to do this properly?
 	public void ContinueGame() {
-		Time.timeScale = 1.0f;
-		OnDisable ();
+		Time.timeScale = 1f;
+		Close ();
 	}
 
 	// GRAPHICS
 	public void GraphicsOptionsLayout() {
-		OnDisable ();
+		Back ();
 		graphicsOptionsLayout.SetActive (true);
 	}
 
@@ -39,12 +59,13 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void CancelGraphicsOptions() {
-
+		Back ();
+		mainMenuLayout.SetActive (true);
 	}
 
 	// AUDIO
 	public void AudioOptionsLayout() {
-		OnDisable ();
+		Back ();
 		audioOptionsLayout.SetActive (true);
 	}
 
@@ -53,12 +74,13 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void CancelAudioOptions() {
-
+		Back ();
+		mainMenuLayout.SetActive (true);
 	}
 
 	// QUIT
 	public void QuitLayout() {
-		OnDisable ();
+		Back ();
 		quitMenuLayout.SetActive (true);
 	}
 
@@ -67,7 +89,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void CancelQuitButton() {
-		OnDisable ();
+		Back ();
 		mainMenuLayout.SetActive (true);
 	}
 }

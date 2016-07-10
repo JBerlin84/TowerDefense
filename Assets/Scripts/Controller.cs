@@ -9,14 +9,12 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour {
 
 	Camera viewCamera;
-	bool isPaused;
 
 	public Transform tower;
-	public GameObject pauseMenu;
+	public PauseMenu pauseMenu;
 
 	void Start () {
 		viewCamera = Camera.main;
-		isPaused = false;
 	}
 
 	void Update () {
@@ -49,14 +47,12 @@ public class Controller : MonoBehaviour {
 		// If escape is pressed, exit
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if (isPaused) {
+			if (pauseMenu.IsDisplaying) {
 				Time.timeScale = 1f;
-				pauseMenu.SetActive (false);
-				isPaused = false;
+				pauseMenu.Close ();
 			} else {
 				Time.timeScale = 0f;
-				pauseMenu.SetActive (true);
-				isPaused = true;
+				pauseMenu.Display ();
 			}
 		}
 	}
