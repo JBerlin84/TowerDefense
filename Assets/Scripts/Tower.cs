@@ -17,7 +17,6 @@ public class Tower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
 		// We only need to do this if we can attack, otherwise it is just a waste of calculations.
 		if (Time.time > nextAttackTime) {
 			GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
