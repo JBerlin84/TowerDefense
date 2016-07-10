@@ -16833,6 +16833,7 @@ MonoBehaviour:
   graphicsOptionsLayout: {fileID: 207254024}
   audioOptionsLayout: {fileID: 1641415250}
   quitMenuLayout: {fileID: 731464458}
+  resolutionDropdown: {fileID: 61913179}
 --- !u!4 &563012371
 Transform:
   m_ObjectHideFlags: 0

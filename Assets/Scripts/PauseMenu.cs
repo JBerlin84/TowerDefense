@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PauseMenu : MonoBehaviour {
+	[Header("Layouts")]
 	public GameObject menuPanel;
 	public GameObject mainMenuLayout;
 	public GameObject graphicsOptionsLayout;
 	public GameObject audioOptionsLayout;
 	public GameObject quitMenuLayout;
+	
+	[Header("Elements")]
+	public Dropdown resolutionDropdown;
 
 	bool isDisplaying;
 
@@ -19,6 +24,20 @@ public class PauseMenu : MonoBehaviour {
 
 	void Start() {
 		//TODO: Set all the settings for audio and graphics here.
+		PopulateResolutionDropdown();
+	}
+
+	/// <summary>
+	/// Populates the resolution dropdown table.
+	/// </summary>
+	void PopulateResolutionDropdown() {
+		resolutionDropdown.ClearOptions();
+		Resolution[] resolutions = Screen.resolutions;
+		List<string> sResolutions = new List<string> ();
+		foreach (Resolution res in resolutions) {
+			sResolutions.Add(res.width + "x" + res.height);
+		}
+		resolutionDropdown.AddOptions (sResolutions);
 	}
 
 	public void Display() {
