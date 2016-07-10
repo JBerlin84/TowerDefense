@@ -78,7 +78,7 @@ MonoBehaviour:
   hitMask:
     serializedVersion: 2
     m_Bits: 256
-  speed: 35
+  speed: 45
   damage: 1
 --- !u!1001 &100100000
 Prefab:
