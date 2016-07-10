@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425636}
   - 208: {fileID: 20802024}
+  - 114: {fileID: 11413346}
   m_Layer: 0
   m_Name: TempTower
   m_TagString: Untagged
@@ -93,6 +94,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134458}
   m_Mesh: {fileID: 4300000, guid: 4c6825fbaec381f4e9d6862a7549977a, type: 3}
+--- !u!114 &11413346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cbaebab552816345bc990087ef1e659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!208 &20802024
 NavMeshObstacle:
   m_ObjectHideFlags: 1
