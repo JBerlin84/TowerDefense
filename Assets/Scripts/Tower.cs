@@ -34,9 +34,8 @@ public class Tower : MonoBehaviour {
 					Vector3 target = enemies[i].transform.position;
 					target.y = muzzle.transform.position.y;
 					muzzle.LookAt (target);
+					Debug.DrawLine (muzzle.transform.position, target);
 
-
-					Debug.DrawLine (myPosition, enemies [i].transform.position, Color.red, 0.25f);
 					Fire ();
 					break;
 				}
