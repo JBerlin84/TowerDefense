@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour {
 	Camera viewCamera;
 	bool isPaused;
 
-	public Transform enemy;
+	public Transform tower;
 	public GameObject pauseMenu;
 
 	void Start () {
@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour {
 			Debug.DrawLine (ray.origin, point, Color.red);
 
 			if (Input.GetMouseButtonUp (0)) {
-				Transform newTower = Instantiate (enemy) as Transform;
+				Transform newTower = Instantiate (tower) as Transform;
 				newTower.transform.position = point;
 			}
 		}
@@ -46,7 +46,6 @@ public class Controller : MonoBehaviour {
 	/// Handles key inputs from the user.
 	/// </summary>
 	void CheckInput() {
-		print ("is being called");
 		// If escape is pressed, exit
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
