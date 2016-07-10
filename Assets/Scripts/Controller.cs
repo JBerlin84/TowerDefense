@@ -18,7 +18,6 @@ public class Controller : MonoBehaviour {
 	}
 
 	void Update () {
-
 		CheckInput();
 
 		// Get the position of the gameboard we are pointing at.

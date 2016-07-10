@@ -4462,10 +4462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fd3ed64725a594ab32964be4850200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewCamera: {fileID: 0}
-  isPaused: 0
   tower: {fileID: 425636, guid: e167dd142d94bf849a386013a56efb3b, type: 2}
-  pauseMenu: {fileID: 1806442638}
+  pauseMenu: {fileID: 563012370}
 --- !u!4 &158649982
 Transform:
   m_ObjectHideFlags: 0
@@ -33714,7 +33712,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 403466, guid: 558542d338240d340b42e20756b5037d, type: 2}
   wallPrefab: {fileID: 457232, guid: 591c2b7c4b087054b95cffc1d0a9dc8d, type: 2}
   mapSize: {x: 31, y: 21}
-  holderName: 47656e657261746564204d6170
+  holderName: Generated Map
   positionEntrance:
     x: 15
     y: -2

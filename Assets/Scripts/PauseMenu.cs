@@ -17,6 +17,10 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
+	void Start() {
+		//TODO: Set all the settings for audio and graphics here.
+	}
+
 	public void Display() {
 		isDisplaying = true;
 		menuPanel.SetActive (true);
@@ -59,6 +63,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void CancelGraphicsOptions() {
+		//TODO: Revert all the graphics settings here
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
@@ -74,6 +79,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void CancelAudioOptions() {
+		//TODO: Revert all the audio settings here
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
