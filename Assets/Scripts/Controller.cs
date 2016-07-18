@@ -10,8 +10,15 @@ public class Controller : MonoBehaviour {
 
 	Camera viewCamera;
 
-	public Transform tower;
+	[Header("Different world controllers")]
 	public PauseMenu pauseMenu;
+
+	[Header("Different world objects")]
+	public Transform entrancePortal;
+	public Transform exitPortal;
+
+	[Header("Tower types")]
+	public Transform tower;
 
 	void Start () {
 		viewCamera = Camera.main;

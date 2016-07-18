@@ -5128,8 +5128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fd3ed64725a594ab32964be4850200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 425636, guid: e167dd142d94bf849a386013a56efb3b, type: 2}
   pauseMenu: {fileID: 563012370}
+  entrancePortal: {fileID: 251940966}
+  exitPortal: {fileID: 817212335}
+  tower: {fileID: 425636, guid: e167dd142d94bf849a386013a56efb3b, type: 2}
 --- !u!4 &158649982
 Transform:
   m_ObjectHideFlags: 0
@@ -5167,8 +5169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6827f3f9ccb962a478d7a145ee6d2487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 0
-  resources: 0
+  startHP: 5
+  resources: 50
 --- !u!1 &159714667
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,6 +7652,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250726900}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &251940966 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 468392, guid: 7de4663f47c55344988b68298df555b4, type: 2}
+  m_PrefabInternal: {fileID: 581558175}
 --- !u!1 &252013241
 GameObject:
   m_ObjectHideFlags: 0
@@ -23425,6 +23431,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!4 &817212335 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 475986, guid: 33657576e4d5c0941b5569eccc234576, type: 2}
+  m_PrefabInternal: {fileID: 1568357799}
 --- !u!1 &818655850
 GameObject:
   m_ObjectHideFlags: 0
