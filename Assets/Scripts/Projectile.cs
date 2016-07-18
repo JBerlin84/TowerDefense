@@ -7,6 +7,17 @@ public class Projectile : MonoBehaviour {
 
 	public float speed;
 	public float damage;
+	public float lifetime;
+
+	float killtime;
+
+	public float Lifetime {
+		get { return lifetime; }
+	}
+
+	void Start() {
+		killtime = Time.time + lifetime;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -15,6 +26,10 @@ public class Projectile : MonoBehaviour {
 		CheckCollision (distanceToTravel);
 
 		transform.Translate (Vector3.forward * distanceToTravel);
+
+		if (Time.time > killtime) {
+			GameObject.Destroy (gameObject);
+		}
 	}
 
 	void CheckCollision(float distanceToTravel) {

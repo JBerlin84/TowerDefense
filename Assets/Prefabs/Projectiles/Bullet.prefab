@@ -80,6 +80,7 @@ MonoBehaviour:
     m_Bits: 256
   speed: 45
   damage: 1
+  lifetime: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
