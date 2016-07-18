@@ -12,12 +12,16 @@ public class EntrancePortal : MonoBehaviour {
 	int currentWaveNumber;
 
 	int enemiesRemainingToSpawn;
+	int enemiesRemainingAlive;
 	float nextSpawnTime;
 
 	Vector3 spawnPosition;
 
+	GameObject worldController;
+
 	void Start() {
 		spawnPosition = GetComponent<Transform>().position;
+		worldController = GameObject.FindGameObjectWithTag ("GameController") as GameObject;
 		NextWave ();
 	}
 
@@ -33,11 +37,29 @@ public class EntrancePortal : MonoBehaviour {
 	}
 
 	void OnEnemyKilled(int value) {
-		print ("Enemy got killed and is worth " + value);
+		PlayerController playerController = worldController.GetComponent<PlayerController> ();
+		playerController.AddResources (value);
+
+		enemyRemoved ();
 	}
 
 	void OnEnemyPortalled() {
-		print ("Enemy got portalled out");
+		PlayerController playerController = worldController.GetComponent<PlayerController> ();
+		playerController.TakeHit ();
+
+		enemyRemoved ();
+	}
+
+	/// <summary>
+	/// This should always happens when an enemy is removed from the game board,
+	/// no matter if it is teleported or killed.
+	/// </summary>
+	void enemyRemoved() {
+		enemiesRemainingAlive--;
+
+		if (enemiesRemainingAlive <= 0) {
+			NextWave ();
+		}
 	}
 
 	/// <summary>
@@ -45,9 +67,12 @@ public class EntrancePortal : MonoBehaviour {
 	/// </summary>
 	void NextWave() {
 		currentWaveNumber++;
-		currentWave = waves[currentWaveNumber - 1];
+		if (currentWaveNumber - 1 < waves.Length) {
+			currentWave = waves[currentWaveNumber - 1];
 
-		enemiesRemainingToSpawn = currentWave.enemyCount;
+			enemiesRemainingToSpawn = currentWave.enemyCount;
+			enemiesRemainingAlive = enemiesRemainingToSpawn;
+		}
 	}
 
 	/// <summary>
