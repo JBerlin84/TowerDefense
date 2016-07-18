@@ -19,7 +19,8 @@ public class ExitPortal : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if(other.tag.Equals("Enemy")) {
-			Destroy (other.gameObject);
+			Enemy enemy = other.GetComponent<Enemy> ();
+			enemy.PortalOut ();
 		}
 	}
 }

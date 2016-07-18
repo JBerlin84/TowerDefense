@@ -22,6 +22,9 @@ public class Enemy : MonoBehaviour {
 	public float scale;
 	//bool dead;
 
+	public System.Action<int> OnKilled;
+	public System.Action OnPortalled;
+
 	// Use this for initialization
 	void Start () {
 		pathfinder = GetComponent<NavMeshAgent> ();
@@ -42,12 +45,22 @@ public class Enemy : MonoBehaviour {
 		hp -= damage;
 
 		if (hp <= 0) {
-			Die ();
+			Killed ();
 		}
 	}
 
-	public void Die() {
+	public void Killed() {
 		//dead = true;
+		if (OnKilled != null) {
+			OnKilled (value);
+		}
+		GameObject.Destroy (gameObject);
+	}
+
+	public void PortalOut() {
+		if (OnPortalled != null) {
+			OnPortalled ();
+		}
 		GameObject.Destroy (gameObject);
 	}
 }

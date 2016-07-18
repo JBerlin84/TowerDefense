@@ -27,7 +27,17 @@ public class EntrancePortal : MonoBehaviour {
 			nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
 
 			Enemy spawnedEnemy = Instantiate (currentWave.enemy, spawnPosition, Quaternion.identity) as Enemy;
+			spawnedEnemy.OnKilled += OnEnemyKilled;
+			spawnedEnemy.OnPortalled += OnEnemyPortalled;
 		}
+	}
+
+	void OnEnemyKilled(int value) {
+		print ("Enemy got killed and is worth " + value);
+	}
+
+	void OnEnemyPortalled() {
+		print ("Enemy got portalled out");
 	}
 
 	/// <summary>
