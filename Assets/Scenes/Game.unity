@@ -605,11 +605,13 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: None
+    - m_Text: Off
       m_Image: {fileID: 0}
-    - m_Text: Medium
+    - m_Text: 2X
       m_Image: {fileID: 0}
-    - m_Text: High
+    - m_Text: 4X
+      m_Image: {fileID: 0}
+    - m_Text: 8X
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4918,6 +4920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHP: 3
+  startResources: 5
 --- !u!1 &159714667
 GameObject:
   m_ObjectHideFlags: 0
@@ -10486,11 +10489,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Low
+    - m_Text: High
       m_Image: {fileID: 0}
     - m_Text: Medium
       m_Image: {fileID: 0}
-    - m_Text: High
+    - m_Text: Low
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -16184,6 +16187,13 @@ MonoBehaviour:
   audioOptionsLayout: {fileID: 1641415250}
   quitMenuLayout: {fileID: 731464458}
   resolutionDropdown: {fileID: 61913179}
+  fullscreenToggle: {fileID: 1202455940}
+  textureQualityDropdown: {fileID: 366433735}
+  AADropdown: {fileID: 8850292}
+  VSyncDropdown: {fileID: 1834447330}
+  masterVolumeSlider: {fileID: 75042584}
+  musicVolumeSlider: {fileID: 1990434650}
+  sfxVolumeSlider: {fileID: 816364518}
 --- !u!4 &563012371
 Transform:
   m_ObjectHideFlags: 0
@@ -25774,7 +25784,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 340, y: 168}
+  m_AnchoredPosition: {x: -182, y: 169}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &869228598

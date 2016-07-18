@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
 
 public class PauseMenu : MonoBehaviour {
 	[Header("Layouts")]
@@ -13,6 +14,14 @@ public class PauseMenu : MonoBehaviour {
 	
 	[Header("Elements")]
 	public Dropdown resolutionDropdown;
+	public Toggle fullscreenToggle;
+	public Dropdown textureQualityDropdown;
+	public Dropdown AADropdown;
+	public Dropdown VSyncDropdown;
+	[Space(10)]
+	public Slider masterVolumeSlider;
+	public Slider musicVolumeSlider;
+	public Slider sfxVolumeSlider;
 
 	bool isDisplaying;
 
@@ -25,6 +34,7 @@ public class PauseMenu : MonoBehaviour {
 	void Start() {
 		//TODO: Set all the settings for audio and graphics here.
 		PopulateResolutionDropdown();
+		LoadSettings ();
 	}
 
 	/// <summary>
@@ -78,11 +88,14 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void ApplyGraphicsOptions() {
-
+		SaveGraphicsSettings ();
+		ApplySettings ();
+		Back ();
+		mainMenuLayout.SetActive (true);
 	}
 
 	public void CancelGraphicsOptions() {
-		//TODO: Revert all the graphics settings here
+		LoadSettings();
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
@@ -94,7 +107,10 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void ApplyAudioOptions() {
-
+		SaveAudioSettings ();
+		ApplySettings ();
+		Back ();
+		mainMenuLayout.SetActive (true);
 	}
 
 	public void CancelAudioOptions() {
@@ -116,5 +132,54 @@ public class PauseMenu : MonoBehaviour {
 	public void CancelQuitButton() {
 		Back ();
 		mainMenuLayout.SetActive (true);
+	}
+
+	void SaveGraphicsSettings() {
+		// Graphics settings
+		PlayerPrefs.SetInt ("resolutionDropdown", resolutionDropdown.value);	// TODO: this needs to take into account the text, not index.
+		PlayerPrefs.SetInt ("fullscreenToggle",fullscreenToggle.isOn?1:0);
+		PlayerPrefs.SetInt ("textureQualityDropdown", textureQualityDropdown.value);
+		PlayerPrefs.SetInt ("AADropdown", AADropdown.value);
+		PlayerPrefs.SetInt ("VSyncDropdown", VSyncDropdown.value);
+
+		PlayerPrefs.Save ();
+	}
+
+	void SaveAudioSettings() {
+		// Volume settings
+		PlayerPrefs.SetFloat ("masterVolumeSlider", masterVolumeSlider.value);
+		PlayerPrefs.SetFloat ("musicVolumeSlider", musicVolumeSlider.value);
+		PlayerPrefs.SetFloat ("sfxVolumeSlider", sfxVolumeSlider.value);
+
+		PlayerPrefs.Save ();
+	}
+
+	void LoadSettings() {
+		// Graphics settings
+		resolutionDropdown.value = PlayerPrefs.GetInt ("resolutionDropdown");	// TODO: this needs to take into account the text, not index.
+		fullscreenToggle.isOn = (PlayerPrefs.GetInt ("fullscreenToggle") == 1) ? true:false;
+		textureQualityDropdown.value = PlayerPrefs.GetInt ("textureQualityDropdown");
+		AADropdown.value = PlayerPrefs.GetInt ("AADropdown");
+		VSyncDropdown.value = PlayerPrefs.GetInt ("VSyncDropdown");
+
+		// Volume settings
+		masterVolumeSlider.value = PlayerPrefs.GetFloat ("masterVolumeSlider");
+		musicVolumeSlider.value = PlayerPrefs.GetFloat ("musicVolumeSlider");
+		sfxVolumeSlider.value = PlayerPrefs.GetFloat ("sfxVolumeSlider");
+	}
+
+	void ApplySettings() {
+		// Set screen resolution
+		Text text = resolutionDropdown.GetComponentInChildren<Text> ();
+		string[] res = text.text.Split('x');
+		int width = Int32.Parse (res [0]);	// pars width
+		int height = Int32.Parse (res [1]);	// parse height
+		Screen.SetResolution (width, height, fullscreenToggle.isOn);
+
+		//Screen.SetResolution(
+		QualitySettings.masterTextureLimit = textureQualityDropdown.value; // 0 max, 1 mid, 2 low
+		QualitySettings.antiAliasing = (AADropdown.value < 3) ? AADropdown.value * 2 : 8;	// 0, 2, 4 or 8 multisamples per pixels.
+		QualitySettings.vSyncCount = VSyncDropdown.value;
+
 	}
 }

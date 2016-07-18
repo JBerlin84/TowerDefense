@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public int startHP;
+	public int startResources;
 	int hp;
 	bool dead;
 	int resources;
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		hp = startHP;
+		resources = startResources;
 		dead = false;
 	}
 

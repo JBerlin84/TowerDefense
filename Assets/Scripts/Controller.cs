@@ -33,21 +33,23 @@ public class Controller : MonoBehaviour {
 		if (!player.Dead) {
 			CheckInput ();
 
-			// Get the position of the gameboard we are pointing at.
-			Ray ray = viewCamera.ScreenPointToRay (Input.mousePosition);
-			Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
+			if (!pauseMenu.IsDisplaying) {
+				// Get the position of the gameboard we are pointing at.
+				Ray ray = viewCamera.ScreenPointToRay (Input.mousePosition);
+				Plane groundPlane = new Plane (Vector3.up, Vector3.zero);
 
-			float rayDistance;
-			if (groundPlane.Raycast (ray, out rayDistance)) {
-				Vector3 point = ray.GetPoint (rayDistance);
+				float rayDistance;
+				if (groundPlane.Raycast (ray, out rayDistance)) {
+					Vector3 point = ray.GetPoint (rayDistance);
 
-				point = PointToTileCoord (point);
+					point = PointToTileCoord (point);
 
-				Debug.DrawLine (ray.origin, point, Color.red);
+					Debug.DrawLine (ray.origin, point, Color.red);
 
-				if (Input.GetMouseButtonUp (0)) {
-					Transform newTower = Instantiate (tower) as Transform;
-					newTower.transform.position = point;
+					if (Input.GetMouseButtonUp (0)) {
+						Transform newTower = Instantiate (tower) as Transform;
+						newTower.transform.position = point;
+					}
 				}
 			}
 		} else {
