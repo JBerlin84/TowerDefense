@@ -87,11 +87,17 @@ public class Controller : MonoBehaviour {
 
 		return point;
 	}
-
+	/// <summary>
+	/// Tell player that he is hit.
+	/// </summary>
 	void PlayerTakeHit() {
 		player.TakeHit ();
 	}
 
+	/// <summary>
+	/// Tell player that he killed an enemy, and grant him resources.
+	/// </summary>
+	/// <param name="value">How much resources he has earned.</param>
 	void PlayerAddResources(int value) {
 		player.AddResources (value);
 	}

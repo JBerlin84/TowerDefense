@@ -50,6 +50,9 @@ public class PauseMenu : MonoBehaviour {
 		resolutionDropdown.AddOptions (sResolutions);
 	}
 
+	/// <summary>
+	/// Resets the pause menu to its initial state
+	/// </summary>
 	public void Display() {
 		isDisplaying = true;
 		menuPanel.SetActive (true);
@@ -59,6 +62,9 @@ public class PauseMenu : MonoBehaviour {
 		quitMenuLayout.SetActive(false);
 	}
 
+	/// <summary>
+	/// Close down the menu.
+	/// </summary>
 	public void Close() {
 		isDisplaying = false;
 		menuPanel.SetActive (false);
@@ -68,6 +74,9 @@ public class PauseMenu : MonoBehaviour {
 		quitMenuLayout.SetActive(false);
 	}
 
+	/// <summary>
+	/// Set all submenu to false.
+	/// </summary>
 	void Back() {
 		mainMenuLayout.SetActive(false);
 		graphicsOptionsLayout.SetActive(false);
@@ -75,18 +84,25 @@ public class PauseMenu : MonoBehaviour {
 		quitMenuLayout.SetActive(false);
 	}
 
-	//TODO: How to do this properly?
+	/// <summary>
+	/// Continues the game.
+	/// </summary>
 	public void ContinueGame() {
 		Time.timeScale = 1f;
 		Close ();
 	}
 
-	// GRAPHICS
+	/// <summary>
+	/// Display graphics options layout
+	/// </summary>
 	public void GraphicsOptionsLayout() {
 		Back ();
 		graphicsOptionsLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Applies the graphics options.
+	/// </summary>
 	public void ApplyGraphicsOptions() {
 		SaveGraphicsSettings ();
 		ApplySettings ();
@@ -94,18 +110,26 @@ public class PauseMenu : MonoBehaviour {
 		mainMenuLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Cancels the modified graphics options.
+	/// </summary>
 	public void CancelGraphicsOptions() {
 		LoadSettings();
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
 
-	// AUDIO
+	/// <summary>
+	/// Displays the audio options layout.
+	/// </summary>
 	public void AudioOptionsLayout() {
 		Back ();
 		audioOptionsLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Applies the audio options.
+	/// </summary>
 	public void ApplyAudioOptions() {
 		SaveAudioSettings ();
 		ApplySettings ();
@@ -113,27 +137,41 @@ public class PauseMenu : MonoBehaviour {
 		mainMenuLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Cancels the modified audio options.
+	/// </summary>
 	public void CancelAudioOptions() {
 		//TODO: Revert all the audio settings here
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
 
-	// QUIT
+	/// <summary>
+	/// Displays the confirm quit menu.
+	/// </summary>
 	public void QuitLayout() {
 		Back ();
 		quitMenuLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Confirms you want to quit.
+	/// </summary>
 	public void ConfirmQuitButton() {
 		SceneManager.LoadScene ("Menu");
 	}
 
+	/// <summary>
+	/// You want to contiue to play.
+	/// </summary>
 	public void CancelQuitButton() {
 		Back ();
 		mainMenuLayout.SetActive (true);
 	}
 
+	/// <summary>
+	/// Saves the graphics settings.
+	/// </summary>
 	void SaveGraphicsSettings() {
 		// Graphics settings
 		PlayerPrefs.SetInt ("resolutionDropdown", resolutionDropdown.value);	// TODO: this needs to take into account the text, not index.
@@ -145,6 +183,9 @@ public class PauseMenu : MonoBehaviour {
 		PlayerPrefs.Save ();
 	}
 
+	/// <summary>
+	/// Saves the audio settings.
+	/// </summary>
 	void SaveAudioSettings() {
 		// Volume settings
 		PlayerPrefs.SetFloat ("masterVolumeSlider", masterVolumeSlider.value);
@@ -154,6 +195,9 @@ public class PauseMenu : MonoBehaviour {
 		PlayerPrefs.Save ();
 	}
 
+	/// <summary>
+	/// Loads both the graphics and options settings.
+	/// </summary>
 	void LoadSettings() {
 		// Graphics settings
 		resolutionDropdown.value = PlayerPrefs.GetInt ("resolutionDropdown");	// TODO: this needs to take into account the text, not index.
@@ -168,6 +212,9 @@ public class PauseMenu : MonoBehaviour {
 		sfxVolumeSlider.value = PlayerPrefs.GetFloat ("sfxVolumeSlider");
 	}
 
+	/// <summary>
+	/// Applies both graphics and audio options.
+	/// </summary>
 	void ApplySettings() {
 		// Set screen resolution
 		Text text = resolutionDropdown.GetComponentInChildren<Text> ();
@@ -176,7 +223,6 @@ public class PauseMenu : MonoBehaviour {
 		int height = Int32.Parse (res [1]);	// parse height
 		Screen.SetResolution (width, height, fullscreenToggle.isOn);
 
-		//Screen.SetResolution(
 		QualitySettings.masterTextureLimit = textureQualityDropdown.value; // 0 max, 1 mid, 2 low
 		QualitySettings.antiAliasing = (AADropdown.value < 3) ? AADropdown.value * 2 : 8;	// 0, 2, 4 or 8 multisamples per pixels.
 		QualitySettings.vSyncCount = VSyncDropdown.value;
