@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class MapHandler {
 
@@ -103,5 +104,56 @@ public class MapHandler {
 		} else {
 			return false;
 		}
+	}
+
+	public bool checkMapConnectivity() {
+		// Count the number of tiles that has been built
+		int builtTileCount = 0;
+		for (int i = 0; i < size.x; i++) {
+			for (int j = 0; j < size.y; j++) {
+				if (map [i, j] == 1) {
+					builtTileCount++;
+				}
+			}
+		}
+
+		// Count the number of free tiles.
+		bool[,] mapFlags = new bool[size.x, size.y];
+		Queue<Coord> queue = new Queue<Coord> ();
+		queue.Enqueue (entrance);
+		mapFlags [entrance.x, entrance.y] = true;
+
+		int accessibleTileCount = 1;
+		//int builtTileCount = 0;
+
+		while (queue.Count > 0) {
+			Coord tile = queue.Dequeue ();
+
+			for (int x = -1; x <= 1; x++) {
+				for (int y = -1; y <= 1; y++) {
+					int neighbourX = tile.x + x;
+					int neighbourY = tile.y + y;
+
+					if (x == 0 || y == 0) {
+						if (neighbourX >= 0 && neighbourX < size.x && neighbourY >= 0 && neighbourY < size.y) {
+							if (!mapFlags [neighbourX, neighbourY] && map [neighbourX, neighbourY] == 0) {
+								mapFlags [neighbourX, neighbourY] = true;
+								queue.Enqueue (new Coord (neighbourX, neighbourY));
+								accessibleTileCount++;
+							}
+							// TODO: Count number of built tiles here in some way.
+							//if (!mapFlags[neighbourX, neighbourY] && map [neighbourX, neighbourY] == 1) {
+							//	mapFlags [neighbourX, neighbourY] = true;
+							//	builtTileCount++;
+							//}
+						}
+					}
+				}
+			}
+		}
+
+		// If the number of free tiles plus the number of built tiles equals the total number of tiles, all the map is accessible.
+		//Debug.Log ("size.x * size.y: " + (size.x * size.y) + "\naccessibleTileCount: " + accessibleTileCount + "\nbuiltTileCount: " + builtTileCount + "\naccessibleTileCount + builtTileCount: " + (accessibleTileCount + builtTileCount));
+		return (size.x * size.y == accessibleTileCount + builtTileCount);
 	}
 }

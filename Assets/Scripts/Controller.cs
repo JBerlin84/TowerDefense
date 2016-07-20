@@ -50,11 +50,25 @@ public class Controller : MonoBehaviour {
 					Debug.DrawLine (ray.origin, point, Color.red);
 
 					if (Input.GetMouseButtonUp (0) && mapHandler.ValidBuildPosition(point)) {
-						Transform newTower = Instantiate (tower) as Transform;
-						newTower.transform.position = point;
-						if (!mapHandler.TakePosition (point)) {
-							print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
+
+						if (mapHandler.TakePosition (point)) {
+							if (mapHandler.checkMapConnectivity ()) {
+								Transform newTower = Instantiate (tower) as Transform;
+								newTower.transform.position = point;
+								print ("building building");
+							} else {
+								mapHandler.ReleasePosition (point);
+								print ("missed building");
+							}
 						}
+						//else {
+						//	print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
+						//}
+
+
+						//if (!mapHandler.TakePosition (point)) {
+						//	
+						//}
 					}
 				}
 			}
