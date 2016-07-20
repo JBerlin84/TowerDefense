@@ -49,9 +49,12 @@ public class Controller : MonoBehaviour {
 
 					Debug.DrawLine (ray.origin, point, Color.red);
 
-					if (Input.GetMouseButtonUp (0)) {
+					if (Input.GetMouseButtonUp (0) && mapHandler.ValidBuildPosition(point)) {
 						Transform newTower = Instantiate (tower) as Transform;
 						newTower.transform.position = point;
+						if (!mapHandler.TakePosition (point)) {
+							print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
+						}
 					}
 				}
 			}

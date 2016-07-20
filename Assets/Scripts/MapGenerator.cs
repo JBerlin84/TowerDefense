@@ -22,7 +22,7 @@ public class MapGenerator : MonoBehaviour {
 
 	MapHandler mapHandler;
 
-	void Start() {
+	void Awake() {
 		GenerateMap ();
 	}
 
@@ -171,7 +171,7 @@ public class MapGenerator : MonoBehaviour {
 	/// <param name="x">The x coordinate.</param>
 	/// <param name="y">The y coordinate.</param>
 	Vector3 CoordinateToPosition(int x, int y) {
-		//return new Vector3 (-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y);
+		// WARNING!!! THIS EXISTS IN TWO POSITIONS, MapGenerator.cs and MapHandler.cs
 		return new Vector3 (-mapSize.x / 2 + x, 0, -mapSize.y / 2 + y);
 	}
 
