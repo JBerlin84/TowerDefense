@@ -55,20 +55,12 @@ public class Controller : MonoBehaviour {
 							if (mapHandler.checkMapConnectivity ()) {
 								Transform newTower = Instantiate (tower) as Transform;
 								newTower.transform.position = point;
-								print ("building building");
 							} else {
 								mapHandler.ReleasePosition (point);
-								print ("missed building");
 							}
+						} else {
+							print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
 						}
-						//else {
-						//	print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
-						//}
-
-
-						//if (!mapHandler.TakePosition (point)) {
-						//	
-						//}
 					}
 				}
 			}
