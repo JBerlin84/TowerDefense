@@ -13,8 +13,10 @@ public class Controller : MonoBehaviour {
 	// Private components of the code.
 	Camera viewCamera;
 	PlayerController player;
+	MapHandler mapHandler;
 
 	[Header("Different world controllers")]
+	public GameObject map;
 	public PauseMenu pauseMenu;
 
 	[Header("Different world objects")]
@@ -27,6 +29,7 @@ public class Controller : MonoBehaviour {
 	void Start () {
 		viewCamera = Camera.main;
 		player = GetComponent<PlayerController> ();
+		mapHandler = map.GetComponent<MapGenerator> ().fetchMapHandler ();
 	}
 
 	void Update () {

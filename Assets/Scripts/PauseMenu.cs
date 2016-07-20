@@ -25,6 +25,10 @@ public class PauseMenu : MonoBehaviour {
 
 	bool isDisplaying;
 
+	/// <summary>
+	/// Gets a value indicating whether this menu is displaying.
+	/// </summary>
+	/// <value><c>true</c> if this instance is displaying; otherwise, <c>false</c>.</value>
 	public bool IsDisplaying {
 		get {
 			return isDisplaying;

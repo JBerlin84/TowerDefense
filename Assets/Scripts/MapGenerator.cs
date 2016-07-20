@@ -11,7 +11,7 @@ public class MapGenerator : MonoBehaviour {
 
 	public Transform tilePrefab;
 	public Transform wallPrefab;
-	public Vector2 mapSize = new Vector2(10, 10);
+	public Coord mapSize = new Coord(31, 21);
 	public string holderName = "Generated Map";
 
 	public Coord positionEntrance;
@@ -20,22 +20,10 @@ public class MapGenerator : MonoBehaviour {
 	[Range(0,1)]
 	public float outline;
 
+	MapHandler mapHandler;
+
 	void Start() {
 		GenerateMap ();
-	}
-
-	/// <summary>
-	/// Map coordinate.
-	/// </summary>
-	[System.Serializable]
-	public struct Coord	{
-		public int x;
-		public int y;
-
-		public Coord(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
 	}
 
 	/// <summary>
@@ -49,6 +37,8 @@ public class MapGenerator : MonoBehaviour {
 	/// Generates the map.
 	/// </summary>
 	public void GenerateMap() {
+		int[,] mapMatrix = new int[mapSize.x, mapSize.y];
+
 		// If there exists a map, destroy it.
 		if (transform.FindChild (holderName)) {
 			DestroyImmediate (transform.FindChild (holderName).gameObject);
@@ -85,10 +75,13 @@ public class MapGenerator : MonoBehaviour {
 						Vector3 pos = CoordinateToPosition (x, y);
 						Transform framePiece = Instantiate (wallPrefab, pos + Vector3.up * 0.5f, Quaternion.identity) as Transform;
 						framePiece.parent = mapHolder;
+						mapMatrix [x, y] = 1;
 					}
 				}
 			}
 		}
+
+		mapHandler = new MapHandler (mapSize, positionEntrance, positionExit, mapMatrix);
 	}
 
 	/// <summary>
@@ -178,6 +171,11 @@ public class MapGenerator : MonoBehaviour {
 	/// <param name="x">The x coordinate.</param>
 	/// <param name="y">The y coordinate.</param>
 	Vector3 CoordinateToPosition(int x, int y) {
-		return new Vector3 (-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y);
+		//return new Vector3 (-mapSize.x / 2 + 0.5f + x, 0, -mapSize.y / 2 + 0.5f + y);
+		return new Vector3 (-mapSize.x / 2 + x, 0, -mapSize.y / 2 + y);
+	}
+
+	public MapHandler fetchMapHandler() {
+		return mapHandler;
 	}
 }
