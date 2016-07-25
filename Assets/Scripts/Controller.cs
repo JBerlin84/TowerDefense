@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(HUDController))]
 [RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(UIController))]
 public class Controller : MonoBehaviour {
 
 	// Private components of the code.
