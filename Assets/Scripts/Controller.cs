@@ -55,7 +55,7 @@ public class Controller : MonoBehaviour {
 					if (Input.GetMouseButtonUp (0) && uiController.IsATowerChosen () && mapHandler.ValidBuildPosition(point)) {
 						if (mapHandler.TakePosition (point)) {
 							if (mapHandler.checkMapConnectivity ()) {
-								Tower tower = uiController.GetChosenTower ();
+								Tower tower = uiController.GetSelectedTower ();
 								Tower newTower = Instantiate (tower) as Tower;
 								newTower.transform.position = point;
 							} else {
@@ -81,7 +81,7 @@ public class Controller : MonoBehaviour {
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if (uiController.IsATowerChosen ()) {
-				uiController.ClearChosenTower ();
+				uiController.ClearSelectedTower ();
 			} else if (pauseMenu.IsDisplaying) {
 				Time.timeScale = 1f;
 				pauseMenu.Close ();

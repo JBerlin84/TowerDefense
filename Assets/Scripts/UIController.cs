@@ -5,61 +5,58 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	Tower chosenTower = null;
+	Tower previewTower;
 
 	[Header("Towers")]
 	public Tower t1; // this is just for the header "bug"?
 	public Tower t2, t3, t4, t5, t6, t7, t8, t9;
 
 	[Header("Related objects")]
-	public GameObject popupPanel;
+	public GameObject popupPanel;		// popup window with data for tower and projectile.
+	public GameObject previewWindow;	// displays what is selected
 
 	void Start() {
 		popupPanel.SetActive (false);
 	}
 
+	void Update() {
+
+	}
+
 	public void Tower1Button() {
-		//chosenTower = (TowerEnum)1;
-		chosenTower = t1;
+		selectTower (t1);
 	}
 
 	public void Tower2Button() {
-		//chosenTower = (TowerEnum)2;
-		chosenTower = t2;
+		selectTower (t2);
 	}
 
 	public void Tower3Button() {
-		//chosenTower = (TowerEnum)3;
-		chosenTower = t3;
+		selectTower (t3);
 	}
 
 	public void Tower4Button() {
-		//chosenTower = (TowerEnum)4;
-		chosenTower = t4;
+		selectTower (t4);
 	}
 
 	public void Tower5Button() {
-		//chosenTower = (TowerEnum)5;
-		chosenTower = t5;
+		selectTower (t5);
 	}
 
 	public void Tower6Button() {
-		//chosenTower = (TowerEnum)6;
-		chosenTower = t6;
+		selectTower (t6);
 	}
 
 	public void Tower7Button() {
-		//chosenTower = (TowerEnum)7;
-		chosenTower = t7;
+		selectTower (t7);
 	}
 
 	public void Tower8Button() {
-		//chosenTower = (TowerEnum)8;
-		chosenTower = t8;
+		selectTower (t8);
 	}
 
 	public void Tower9Button() {
-		//chosenTower = (TowerEnum)9;
-		chosenTower = t9;
+		selectTower (t9);
 	}
 
 	public void Tower1OnTriggerEnter() {
@@ -134,7 +131,7 @@ public class UIController : MonoBehaviour {
 		
 	}*/
 
-	public Tower GetChosenTower() {
+	public Tower GetSelectedTower() {
 		return chosenTower;
 	}
 
@@ -142,8 +139,23 @@ public class UIController : MonoBehaviour {
 		return chosenTower != null;
 	}
 
-	public void ClearChosenTower() {
+	public void ClearSelectedTower() {
 		chosenTower = null;
+		GameObject.Destroy (previewTower);
+	}
+
+	void selectTower(Tower tower) {
+		ClearSelectedTower ();
+
+		chosenTower = t1;
+
+		/*
+		previewTower = Instantiate (tower) as Tower;
+		Transform ttransform = previewTower.transform;
+		ttransform.parent = previewWindow.transform;
+		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
+		ttransform.localScale = new Vector3 (45, 45, 45);
+		*/
 	}
 
 	void displayStats(Tower tower) {

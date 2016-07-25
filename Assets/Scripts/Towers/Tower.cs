@@ -5,6 +5,7 @@ public class Tower : MonoBehaviour {
 
 	[Header("Tower")]
 	public string towerName;
+	public int price;
 	public float attackSpeed;
 	float nextAttackTime;
 	public float range;

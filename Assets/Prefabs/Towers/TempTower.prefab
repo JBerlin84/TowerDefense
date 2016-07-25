@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerName: Temporary tower
+  price: 1
   attackSpeed: 1
   range: 5
   muzzle: {fileID: 472610}
