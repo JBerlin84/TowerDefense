@@ -4,6 +4,7 @@ using System.Collections;
 public class Tower : MonoBehaviour {
 
 	[Header("Tower")]
+	public string towerName;
 	public float attackSpeed;
 	float nextAttackTime;
 	public float range;
@@ -50,5 +51,23 @@ public class Tower : MonoBehaviour {
 			newProjectile.damage *= damageBonus;
 			nextAttackTime = Time.time + attackSpeed;
 		}
+	}
+
+	public override string ToString() {
+		string data;
+
+		data = towerName + "\n";
+		data += "-----------------\n";
+		data += "Attack speed: " + attackSpeed + "\n";
+		data += "Range: " + range + "\n";
+		data += "\n";
+		data += "Speed bonus: " + speedBonus + "\n";
+		data += "Damage bonus: " + damageBonus + "\n";
+		data += "\n";
+		data += "Projectile\n";
+		data += "----------\n";
+		data += projectile.ToString ();
+
+		return data;
 	}
 }

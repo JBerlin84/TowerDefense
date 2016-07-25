@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour {
 
 	public LayerMask hitMask;
 
+	public string projectileName;
 	public float speed;
 	public float damage;
 	public float lifetime;
@@ -49,5 +50,15 @@ public class Projectile : MonoBehaviour {
 		}
 		// The projectile should be destroyed
 		GameObject.Destroy (gameObject);
+	}
+
+	public override string ToString() {
+		string data;
+
+		data = projectileName + "\n";
+		data += "Speed: " + speed +"\n";
+		data += "Damage" + damage +"\n";
+
+		return data;
 	}
 }
