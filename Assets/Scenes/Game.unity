@@ -6861,7 +6861,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower9OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12615,7 +12615,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower4OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23537,7 +23537,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower7OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -36574,7 +36574,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower1OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -37114,7 +37114,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower2OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -53440,7 +53440,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower3OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -62144,7 +62144,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower8OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -62837,7 +62837,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower6OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -63495,7 +63495,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 158649985}
-          m_MethodName: Tower5OnTriggerExit
+          m_MethodName: TowerOnTriggerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

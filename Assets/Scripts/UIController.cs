@@ -13,6 +13,10 @@ public class UIController : MonoBehaviour {
 	[Header("Related objects")]
 	public GameObject popupPanel;
 
+	void Start() {
+		popupPanel.SetActive (false);
+	}
+
 	public void Tower1Button() {
 		//chosenTower = (TowerEnum)1;
 		chosenTower = t1;
@@ -59,45 +63,45 @@ public class UIController : MonoBehaviour {
 	}
 
 	public void Tower1OnTriggerEnter() {
-		displayStats (t1, Vector3.zero);
+		displayStats (t1);
 	}
 
 	public void Tower2OnTriggerEnter() {
-
+		displayStats (t2);
 	}
 
 	public void Tower3OnTriggerEnter() {
-
+		displayStats (t3);
 	}
 
 	public void Tower4OnTriggerEnter() {
-
+		displayStats (t4);
 	}
 
 	public void Tower5OnTriggerEnter() {
-
+		displayStats (t5);
 	}
 
 	public void Tower6OnTriggerEnter() {
-
+		displayStats (t6);
 	}
 
 	public void Tower7OnTriggerEnter() {
-
+		displayStats (t7);
 	}
 
 	public void Tower8OnTriggerEnter() {
-
+		displayStats (t8);
 	}
 
 	public void Tower9OnTriggerEnter() {
-
+		displayStats (t9);
 	}
 
-	public void Tower1OnTriggerExit() {
+	public void TowerOnTriggerExit() {
 		hideStats ();
 	}
-
+	/*
 	public void Tower2OnTriggerExit() {
 
 	}
@@ -128,7 +132,7 @@ public class UIController : MonoBehaviour {
 
 	public void Tower9OnTriggerExit() {
 		
-	}
+	}*/
 
 	public Tower GetChosenTower() {
 		return chosenTower;
@@ -142,7 +146,7 @@ public class UIController : MonoBehaviour {
 		chosenTower = null;
 	}
 
-	void displayStats(Tower tower, Vector3 pos) {
+	void displayStats(Tower tower) {
 		popupPanel.SetActive (true);
 
 		Text text = popupPanel.GetComponentInChildren<Text> ();
