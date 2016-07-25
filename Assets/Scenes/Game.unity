@@ -4406,7 +4406,6 @@ MonoBehaviour:
   pauseMenu: {fileID: 563012370}
   entrancePortal: {fileID: 251940966}
   exitPortal: {fileID: 817212335}
-  tower: {fileID: 425636, guid: e167dd142d94bf849a386013a56efb3b, type: 2}
 --- !u!4 &158649982
 Transform:
   m_ObjectHideFlags: 0
@@ -6191,7 +6190,7 @@ RectTransform:
   - {fileID: 563012371}
   - {fileID: 1806442639}
   - {fileID: 332985838}
-  - {fileID: 900457519}
+  - {fileID: 1033862353}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
@@ -6715,7 +6714,6 @@ GameObject:
   - 114: {fileID: 251041658}
   - 114: {fileID: 251041657}
   - 114: {fileID: 251041660}
-  - 114: {fileID: 251041661}
   m_Layer: 5
   m_Name: T9
   m_TagString: Untagged
@@ -6735,11 +6733,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 55383690}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 9
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 10
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 20}
+  m_AnchoredPosition: {x: 330.00003, y: -154.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251041657
@@ -6874,18 +6872,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &251041661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 251041655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!4 &251940966 stripped
 Transform:
   m_PrefabParentObject: {fileID: 468392, guid: 7de4663f47c55344988b68298df555b4, type: 2}
@@ -12376,11 +12362,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 630196471}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 0
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60.5, y: -22.6}
+  m_AnchoredPosition: {x: 289.5, y: 152.20093}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442833549
@@ -12469,7 +12455,6 @@ GameObject:
   - 114: {fileID: 445720923}
   - 114: {fileID: 445720922}
   - 114: {fileID: 445720925}
-  - 114: {fileID: 445720926}
   m_Layer: 5
   m_Name: T4
   m_TagString: Untagged
@@ -12489,11 +12474,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1937276724}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 4
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 5
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90, y: 55}
+  m_AnchoredPosition: {x: 260, y: -119.8009}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445720922
@@ -12628,18 +12613,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &445720926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 445720920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &449605201
 GameObject:
   m_ObjectHideFlags: 0
@@ -23391,7 +23364,6 @@ GameObject:
   - 114: {fileID: 761592356}
   - 114: {fileID: 761592355}
   - 114: {fileID: 761592358}
-  - 114: {fileID: 761592359}
   m_Layer: 5
   m_Name: T7
   m_TagString: Untagged
@@ -23411,11 +23383,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 387160732}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 7
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 8
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90, y: 20}
+  m_AnchoredPosition: {x: 260, y: -154.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761592355
@@ -23550,18 +23522,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &761592359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 761592353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &763951605
 GameObject:
   m_ObjectHideFlags: 0
@@ -28033,85 +27993,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 898846713}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &900457518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 900457519}
-  - 222: {fileID: 900457521}
-  - 114: {fileID: 900457520}
-  m_Layer: 5
-  m_Name: UI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &900457519
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900457518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 442833548}
-  - {fileID: 1219527116}
-  - {fileID: 1231996052}
-  - {fileID: 1788315377}
-  - {fileID: 445720921}
-  - {fileID: 2100390720}
-  - {fileID: 2093135965}
-  - {fileID: 761592354}
-  - {fileID: 2080449229}
-  - {fileID: 251041656}
-  - {fileID: 1191244002}
-  m_Father: {fileID: 230353535}
-  m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &900457520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900457518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &900457521
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900457518}
 --- !u!1 &900772073
 GameObject:
   m_ObjectHideFlags: 0
@@ -32003,6 +31884,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027074085}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1033862352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1033862353}
+  m_Layer: 5
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1033862353
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033862352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1191244002}
+  - {fileID: 442833548}
+  - {fileID: 1219527116}
+  - {fileID: 1231996052}
+  - {fileID: 1788315377}
+  - {fileID: 445720921}
+  - {fileID: 2100390720}
+  - {fileID: 2093135965}
+  - {fileID: 761592354}
+  - {fileID: 2080449229}
+  - {fileID: 251041656}
+  m_Father: {fileID: 230353535}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1034095118
 GameObject:
   m_ObjectHideFlags: 0
@@ -35867,8 +35792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1556814203}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 10
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 242.1, y: -145.8}
@@ -36428,7 +36353,6 @@ GameObject:
   - 114: {fileID: 1219527118}
   - 114: {fileID: 1219527117}
   - 114: {fileID: 1219527120}
-  - 114: {fileID: 1219527121}
   m_Layer: 5
   m_Name: T1
   m_TagString: Untagged
@@ -36448,11 +36372,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 516302054}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 1
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -90, y: 90}
+  m_AnchoredPosition: {x: 260, y: -84.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1219527117
@@ -36587,18 +36511,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &1219527121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1219527115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 11413346, guid: e167dd142d94bf849a386013a56efb3b, type: 2}
 --- !u!1 &1221941348
 GameObject:
   m_ObjectHideFlags: 0
@@ -36968,7 +36880,6 @@ GameObject:
   - 114: {fileID: 1231996054}
   - 114: {fileID: 1231996053}
   - 114: {fileID: 1231996056}
-  - 114: {fileID: 1231996057}
   m_Layer: 5
   m_Name: T2
   m_TagString: Untagged
@@ -36988,11 +36899,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1520889207}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 2
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -55, y: 90}
+  m_AnchoredPosition: {x: 294.99997, y: -84.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231996053
@@ -37127,18 +37038,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &1231996057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231996051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &1232005855
 GameObject:
   m_ObjectHideFlags: 0
@@ -53294,7 +53193,6 @@ GameObject:
   - 114: {fileID: 1788315379}
   - 114: {fileID: 1788315378}
   - 114: {fileID: 1788315381}
-  - 114: {fileID: 1788315382}
   m_Layer: 5
   m_Name: T3
   m_TagString: Untagged
@@ -53314,11 +53212,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 470380254}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 3
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 4
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 90}
+  m_AnchoredPosition: {x: 330.00003, y: -84.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788315378
@@ -53453,18 +53351,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &1788315382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1788315376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &1791292979
 GameObject:
   m_ObjectHideFlags: 0
@@ -61998,7 +61884,6 @@ GameObject:
   - 114: {fileID: 2080449231}
   - 114: {fileID: 2080449230}
   - 114: {fileID: 2080449233}
-  - 114: {fileID: 2080449234}
   m_Layer: 5
   m_Name: T8
   m_TagString: Untagged
@@ -62018,11 +61903,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1710764809}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 8
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 9
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -55, y: 20}
+  m_AnchoredPosition: {x: 294.99997, y: -154.80092}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080449230
@@ -62157,18 +62042,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &2080449234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2080449228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &2081686419
 GameObject:
   m_ObjectHideFlags: 0
@@ -62691,7 +62564,6 @@ GameObject:
   - 114: {fileID: 2093135967}
   - 114: {fileID: 2093135966}
   - 114: {fileID: 2093135969}
-  - 114: {fileID: 2093135970}
   m_Layer: 5
   m_Name: T6
   m_TagString: Untagged
@@ -62711,11 +62583,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 153152759}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 6
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 7
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20, y: 55}
+  m_AnchoredPosition: {x: 330.00003, y: -119.8009}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093135966
@@ -62850,18 +62722,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &2093135970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2093135964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &2093334080
 GameObject:
   m_ObjectHideFlags: 0
@@ -63349,7 +63209,6 @@ GameObject:
   - 114: {fileID: 2100390722}
   - 114: {fileID: 2100390721}
   - 114: {fileID: 2100390724}
-  - 114: {fileID: 2100390725}
   m_Layer: 5
   m_Name: T5
   m_TagString: Untagged
@@ -63369,11 +63228,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2005803550}
-  m_Father: {fileID: 900457519}
-  m_RootOrder: 5
+  m_Father: {fileID: 1033862353}
+  m_RootOrder: 6
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -55, y: 55}
+  m_AnchoredPosition: {x: 294.99997, y: -119.8009}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100390721
@@ -63508,18 +63367,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!114 &2100390725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2100390719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45452f3deace15c40a345464d0f0770f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 0}
 --- !u!1 &2100944237
 GameObject:
   m_ObjectHideFlags: 0

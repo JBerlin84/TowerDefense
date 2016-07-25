@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour {
 	Camera viewCamera;
 	PlayerController player;
 	MapHandler mapHandler;
+	UIController uiController;
 
 	[Header("Different world controllers")]
 	public GameObject map;
@@ -24,13 +25,14 @@ public class Controller : MonoBehaviour {
 	public Transform entrancePortal;
 	public Transform exitPortal;
 
-	[Header("Tower types")]
-	public Transform tower;
+	//[Header("Tower types")]
+	//public Transform tower;
 
 	void Start () {
 		viewCamera = Camera.main;
 		player = GetComponent<PlayerController> ();
 		mapHandler = map.GetComponent<MapGenerator> ().fetchMapHandler ();
+		uiController = GetComponent<UIController> ();
 	}
 
 	void Update () {
@@ -50,11 +52,11 @@ public class Controller : MonoBehaviour {
 
 					Debug.DrawLine (ray.origin, point, Color.red);
 
-					if (Input.GetMouseButtonUp (0) && mapHandler.ValidBuildPosition(point)) {
-
+					if (Input.GetMouseButtonUp (0) && uiController.IsATowerChosen () && mapHandler.ValidBuildPosition(point)) {
 						if (mapHandler.TakePosition (point)) {
 							if (mapHandler.checkMapConnectivity ()) {
-								Transform newTower = Instantiate (tower) as Transform;
+								Tower tower = uiController.GetChosenTower ();
+								Tower newTower = Instantiate (tower) as Tower;
 								newTower.transform.position = point;
 							} else {
 								mapHandler.ReleasePosition (point);
@@ -78,7 +80,9 @@ public class Controller : MonoBehaviour {
 		// If escape is pressed, exit
 		// TODO: This should probably be a game menu of some sort.
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if (pauseMenu.IsDisplaying) {
+			if (uiController.IsATowerChosen ()) {
+				uiController.ClearChosenTower ();
+			} else if (pauseMenu.IsDisplaying) {
 				Time.timeScale = 1f;
 				pauseMenu.Close ();
 			} else {
