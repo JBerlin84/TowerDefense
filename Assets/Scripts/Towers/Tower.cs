@@ -59,6 +59,7 @@ public class Tower : MonoBehaviour {
 
 		data = towerName + "\n";
 		data += "-----------------\n";
+		data += "Resources: " + price + "\n";
 		data += "Attack speed: " + attackSpeed + "\n";
 		data += "Range: " + range + "\n";
 		data += "\n";
