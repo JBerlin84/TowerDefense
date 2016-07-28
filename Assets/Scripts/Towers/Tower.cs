@@ -45,6 +45,9 @@ public class Tower : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Fire tower.
+	/// </summary>
 	void Fire() {
 		if (Time.time > nextAttackTime) {
 			Projectile newProjectile = Instantiate (projectile, muzzle.position, muzzle.rotation) as Projectile;
@@ -54,6 +57,11 @@ public class Tower : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Returns a string that represents the current tower.
+	/// </summary>
+	/// <returns>A string that represents the current tower.</returns>
+	/// <filterpriority>2</filterpriority>
 	public override string ToString() {
 		string data;
 

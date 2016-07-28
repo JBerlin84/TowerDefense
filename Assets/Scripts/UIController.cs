@@ -131,23 +131,38 @@ public class UIController : MonoBehaviour {
 		
 	}*/
 
+	/// <summary>
+	/// Gets the selected tower to build.
+	/// </summary>
+	/// <returns>The selected tower.</returns>
 	public Tower GetSelectedTower() {
 		return chosenTower;
 	}
 
+	/// <summary>
+	/// Check wether a tower has been selected for building.
+	/// </summary>
+	/// <returns><c>true</c> if a tower is chosen; otherwise, <c>false</c>.</returns>
 	public bool IsATowerChosen() {
 		return chosenTower != null;
 	}
 
+	/// <summary>
+	/// Clears the selected tower to be build so we no longer have a selected tower.
+	/// </summary>
 	public void ClearSelectedTower() {
 		chosenTower = null;
 		GameObject.Destroy (previewTower);
 	}
 
+	/// <summary>
+	/// Selects given tower as the current tower to be built.
+	/// </summary>
+	/// <param name="tower">Tower to build.</param>
 	void selectTower(Tower tower) {
 		ClearSelectedTower ();
 
-		chosenTower = t1;
+		chosenTower = tower;
 
 		/*
 		previewTower = Instantiate (tower) as Tower;
@@ -158,6 +173,10 @@ public class UIController : MonoBehaviour {
 		*/
 	}
 
+	/// <summary>
+	/// Displaies the stats for the selected tower.
+	/// </summary>
+	/// <param name="tower">Tower.</param>
 	void displayStats(Tower tower) {
 		popupPanel.SetActive (true);
 
@@ -165,6 +184,9 @@ public class UIController : MonoBehaviour {
 		text.text = tower.ToString ();
 	}
 
+	/// <summary>
+	/// Hides the stats for the tower.
+	/// </summary>
 	void hideStats() {
 		popupPanel.SetActive (false);
 	}

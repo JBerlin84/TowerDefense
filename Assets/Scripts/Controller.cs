@@ -52,17 +52,21 @@ public class Controller : MonoBehaviour {
 
 					Debug.DrawLine (ray.origin, point, Color.red);
 
+					// Check if mousebutton is pressed, that there is a tower chosen to be built and that the position to build on is not taken.
 					if (Input.GetMouseButtonUp (0) && uiController.IsATowerChosen () && mapHandler.ValidBuildPosition(point)) {
-						if (mapHandler.TakePosition (point)) {
-							if (mapHandler.checkMapConnectivity ()) {
-								Tower tower = uiController.GetSelectedTower ();
-								Tower newTower = Instantiate (tower) as Tower;
-								newTower.transform.position = point;
+						Tower tower = uiController.GetSelectedTower ();
+						if (tower.price <= player.Resources) {								// Check wether we can afford to build the tower.
+							if (mapHandler.TakePosition (point)) {							// Set the position to taken so we can check connectivity of map.
+								if (mapHandler.checkMapConnectivity ()) {					// Check the connectivity.
+									Tower newTower = Instantiate (tower) as Tower;			// Instantiate new tower on given position
+									newTower.transform.position = point;
+									player.SubstractResources (newTower.price);				// Remove resources from player.
+								} else {													// If the map connectivity test fails.
+									mapHandler.ReleasePosition (point);						// Remove the position again.
+								}
 							} else {
-								mapHandler.ReleasePosition (point);
+								print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
 							}
-						} else {
-							print("Some problem occured, i passed as valid position, but could not change point to taken: " + point.ToString());
 						}
 					}
 				}
