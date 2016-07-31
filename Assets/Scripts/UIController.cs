@@ -164,13 +164,17 @@ public class UIController : MonoBehaviour {
 
 		chosenTower = tower;
 
-		/*
+        // preview tower.
 		previewTower = Instantiate (tower) as Tower;
 		Transform ttransform = previewTower.transform;
 		ttransform.parent = previewWindow.transform;
 		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
 		ttransform.localScale = new Vector3 (45, 45, 45);
-		*/
+        ttransform.localPosition = Vector3.zero;
+        ttransform.localPosition = new Vector3(ttransform.localPosition.x, ttransform.localPosition.y - ttransform.localScale.y, ttransform.localPosition.z);
+        //ttransform.rotation =
+        ttransform.localRotation = Quaternion.Euler(Vector3.zero);
+		
 	}
 
 	/// <summary>
