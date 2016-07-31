@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tower : MonoBehaviour {
+public abstract class Tower : MonoBehaviour {
 
 	[Header("Tower")]
 	public string towerName;
 	public int price;
 	public float attackSpeed;
-	float nextAttackTime;
+	protected float nextAttackTime;
 	public float range;
 
 	[Header("Bullet")]
@@ -16,7 +16,7 @@ public class Tower : MonoBehaviour {
 	public float speedBonus;
 	public float damageBonus;
 
-	Vector3 myPosition;
+	protected Vector3 myPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class Tower : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	abstract protected void Update (); /* {
 		//TODO: Play idle animation of tower.
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -43,19 +43,19 @@ public class Tower : MonoBehaviour {
 				}
 			}
 		}
-	}
+	}*/
 
 	/// <summary>
 	/// Fire tower.
 	/// </summary>
-	void Fire() {
+	abstract protected void Fire(); /*{
 		if (Time.time > nextAttackTime) {
 			Projectile newProjectile = Instantiate (projectile, muzzle.position, muzzle.rotation) as Projectile;
 			newProjectile.speed *= speedBonus;
 			newProjectile.damage *= damageBonus;
 			nextAttackTime = Time.time + attackSpeed;
 		}
-	}
+	}*/
 
 	/// <summary>
 	/// Returns a string that represents the current tower.
