@@ -170,6 +170,7 @@ public class UIController : MonoBehaviour {
 		previewTower = Instantiate (tower) as Tower;
 		Transform ttransform = previewTower.transform;
         Destroy(ttransform.GetComponent<NavMeshObstacle>());
+        Destroy(ttransform.GetComponent<Tower>());
 		ttransform.parent = previewWindow.transform;
 		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
 		ttransform.localScale = new Vector3 (45, 45, 45);
