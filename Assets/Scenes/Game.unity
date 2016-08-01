@@ -4601,6 +4601,7 @@ MonoBehaviour:
   t7: {fileID: 0}
   t8: {fileID: 0}
   t9: {fileID: 0}
+  rotationSpeed: 40
   popupPanel: {fileID: 1191244001}
   previewWindow: {fileID: 58483996}
 --- !u!1 &159559605

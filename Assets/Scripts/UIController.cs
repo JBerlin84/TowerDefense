@@ -11,6 +11,10 @@ public class UIController : MonoBehaviour {
 	public Tower t1; // this is just for the header "bug"?
 	public Tower t2, t3, t4, t5, t6, t7, t8, t9;
 
+    [Header("Preview")]
+    [Range(0,100)]
+    public int rotationSpeed;
+
 	[Header("Related objects")]
 	public GameObject popupPanel;		// popup window with data for tower and projectile.
 	public GameObject previewWindow;	// displays what is selected
@@ -20,7 +24,11 @@ public class UIController : MonoBehaviour {
 	}
 
 	void Update() {
-
+        // Rotates the preview tower if there is one.
+        GameObject preview = GameObject.FindGameObjectWithTag("Preview");
+        if (preview) {
+            preview.transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed);
+        }
 	}
 
 	public void Tower1Button() {
