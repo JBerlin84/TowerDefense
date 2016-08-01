@@ -153,6 +153,8 @@ public class UIController : MonoBehaviour {
 	public void ClearSelectedTower() {
 		chosenTower = null;
 		GameObject.Destroy (previewTower);
+        GameObject g = GameObject.FindGameObjectWithTag("Preview");
+        GameObject.Destroy(g);        
 	}
 
 	/// <summary>
@@ -167,14 +169,14 @@ public class UIController : MonoBehaviour {
         // preview tower.
 		previewTower = Instantiate (tower) as Tower;
 		Transform ttransform = previewTower.transform;
+        Destroy(ttransform.GetComponent<NavMeshObstacle>());
 		ttransform.parent = previewWindow.transform;
 		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
 		ttransform.localScale = new Vector3 (45, 45, 45);
         ttransform.localPosition = Vector3.zero;
         ttransform.localPosition = new Vector3(ttransform.localPosition.x, ttransform.localPosition.y - ttransform.localScale.y, ttransform.localPosition.z);
-        //ttransform.rotation =
         ttransform.localRotation = Quaternion.Euler(Vector3.zero);
-		
+        ttransform.tag = "Preview";
 	}
 
 	/// <summary>
