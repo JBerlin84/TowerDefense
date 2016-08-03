@@ -150,10 +150,10 @@ public class UIController : MonoBehaviour {
 		Destroy(ttransform.GetComponent<AudioSource>());
 		ttransform.parent = previewWindow.transform;
 		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
-		ttransform.localScale = new Vector3 (45, 45, 45);
+		ttransform.localScale = new Vector3 (55, 55, 55);
         ttransform.localPosition = Vector3.zero;
-        ttransform.localPosition = new Vector3(ttransform.localPosition.x, ttransform.localPosition.y - ttransform.localScale.y, ttransform.localPosition.z);
-        ttransform.localRotation = Quaternion.Euler(Vector3.zero);
+		ttransform.localPosition = new Vector3(ttransform.localPosition.x, ttransform.localPosition.y - ttransform.localScale.y/2, ttransform.localPosition.z);
+		ttransform.localRotation = Quaternion.Euler(new Vector3(0,180,0));		// We want the turrets to face forward in the beginning. :)
         ttransform.tag = "Preview";
 	}
 
