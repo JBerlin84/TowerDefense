@@ -29,6 +29,8 @@ public class AssaultTower : Tower {
 	}
 
     protected override void Fire() {
+		base.Fire ();
+
         if (Time.time > nextAttackTime)
         {
             Projectile newProjectile = Instantiate(projectile, muzzle.position, muzzle.rotation) as Projectile;

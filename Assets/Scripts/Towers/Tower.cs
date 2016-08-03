@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public abstract class Tower : MonoBehaviour {
 
 	[Header("Tower")]
@@ -9,6 +10,7 @@ public abstract class Tower : MonoBehaviour {
 	public float attackSpeed;
 	protected float nextAttackTime;
 	public float range;
+	public AudioClip fireSound;
 
 	[Header("Bullet")]
 	public Transform muzzle;
@@ -17,10 +19,15 @@ public abstract class Tower : MonoBehaviour {
 	public float damageBonus;
 
 	protected Vector3 myPosition;
+	protected AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
 		myPosition = this.transform.position;
+		audioSource = GetComponent<AudioSource> ();
+		if (audioSource == null) {
+			print ("Audio source is null");
+		}
 	}
 	
 	// Update is called once per frame
@@ -48,14 +55,18 @@ public abstract class Tower : MonoBehaviour {
 	/// <summary>
 	/// Fire tower.
 	/// </summary>
-	abstract protected void Fire(); /*{
+	virtual protected void Fire() {
+		if (Time.time > nextAttackTime) {
+			audioSource.PlayOneShot(fireSound);
+		}
+		/*
 		if (Time.time > nextAttackTime) {
 			Projectile newProjectile = Instantiate (projectile, muzzle.position, muzzle.rotation) as Projectile;
 			newProjectile.speed *= speedBonus;
 			newProjectile.damage *= damageBonus;
 			nextAttackTime = Time.time + attackSpeed;
-		}
-	}*/
+		}*/
+	}
 
 	/// <summary>
 	/// Returns a string that represents the current tower.
