@@ -11,6 +11,10 @@ public abstract class Tower : MonoBehaviour {
 	protected float nextAttackTime;
 	public float range;
 	public AudioClip fireSound;
+	[Range(0,1)] public float fireLowRange;
+	[Range(0,1)] public float fireHighRange;
+	[Range(0,2)] public float lowPitchRange;
+	[Range(0,2)] public float highPitchRange;
 
 	[Header("Bullet")]
 	public Transform muzzle;
@@ -25,9 +29,6 @@ public abstract class Tower : MonoBehaviour {
 	void Start () {
 		myPosition = this.transform.position;
 		audioSource = GetComponent<AudioSource> ();
-		if (audioSource == null) {
-			print ("Audio source is null");
-		}
 	}
 	
 	// Update is called once per frame
@@ -57,7 +58,10 @@ public abstract class Tower : MonoBehaviour {
 	/// </summary>
 	virtual protected void Fire() {
 		if (Time.time > nextAttackTime) {
-			audioSource.PlayOneShot(fireSound);
+			float vol = Random.Range (fireLowRange, fireHighRange);
+			float pitch = Random.Range (lowPitchRange, highPitchRange);
+			audioSource.pitch = pitch;
+			audioSource.PlayOneShot(fireSound, vol);
 		}
 		/*
 		if (Time.time > nextAttackTime) {
