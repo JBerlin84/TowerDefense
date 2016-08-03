@@ -214,6 +214,10 @@ MonoBehaviour:
   attackSpeed: 1
   range: 5
   fireSound: {fileID: 8300000, guid: d244b5d790efabe4cae1e8d62cf9f84c, type: 3}
+  fireLowRange: 0.5
+  fireHighRange: 1
+  lowPitchRange: 0.75
+  highPitchRange: 1.25
   muzzle: {fileID: 472610}
   projectile: {fileID: 11482398, guid: 1b4c66be0b69a2b4c930cca182901eaa, type: 2}
   speedBonus: 1

@@ -10,6 +10,8 @@ public abstract class Tower : MonoBehaviour {
 	public float attackSpeed;
 	protected float nextAttackTime;
 	public float range;
+
+	[Header("Sound")]
 	public AudioClip fireSound;
 	[Range(0,1)] public float fireLowRange;
 	[Range(0,1)] public float fireHighRange;
@@ -32,26 +34,7 @@ public abstract class Tower : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	abstract protected void Update (); /* {
-		//TODO: Play idle animation of tower.
-		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-		if (enemies.Length > 0) {
-			for (int i = 0; i < enemies.Length; i++) {
-				float distance = Vector3.Distance (myPosition, enemies [i].transform.position);
-				if (distance < range) {
-					// Enemy is within distance of turret, aim at enemy
-					Vector3 target = enemies[i].transform.position;
-					target.y = muzzle.transform.position.y;
-					muzzle.LookAt (target);
-					Debug.DrawLine (muzzle.transform.position, target);
-
-					Fire ();
-					break;
-				}
-			}
-		}
-	}*/
+	abstract protected void Update ();
 
 	/// <summary>
 	/// Fire tower.
@@ -63,13 +46,6 @@ public abstract class Tower : MonoBehaviour {
 			audioSource.pitch = pitch;
 			audioSource.PlayOneShot(fireSound, vol);
 		}
-		/*
-		if (Time.time > nextAttackTime) {
-			Projectile newProjectile = Instantiate (projectile, muzzle.position, muzzle.rotation) as Projectile;
-			newProjectile.speed *= speedBonus;
-			newProjectile.damage *= damageBonus;
-			nextAttackTime = Time.time + attackSpeed;
-		}*/
 	}
 
 	/// <summary>
