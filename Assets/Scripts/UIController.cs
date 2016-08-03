@@ -106,38 +106,6 @@ public class UIController : MonoBehaviour {
 	public void TowerOnTriggerExit() {
 		hideStats ();
 	}
-	/*
-	public void Tower2OnTriggerExit() {
-
-	}
-
-	public void Tower3OnTriggerExit() {
-
-	}
-
-	public void Tower4OnTriggerExit() {
-
-	}
-
-	public void Tower5OnTriggerExit() {
-
-	}
-
-	public void Tower6OnTriggerExit() {
-
-	}
-
-	public void Tower7OnTriggerExit() {
-
-	}
-
-	public void Tower8OnTriggerExit() {
-
-	}
-
-	public void Tower9OnTriggerExit() {
-		
-	}*/
 
 	/// <summary>
 	/// Gets the selected tower to build.
@@ -177,8 +145,9 @@ public class UIController : MonoBehaviour {
         // preview tower.
 		previewTower = Instantiate (tower) as Tower;
 		Transform ttransform = previewTower.transform;
+		Destroy(ttransform.GetComponent<Tower>());
         Destroy(ttransform.GetComponent<NavMeshObstacle>());
-        Destroy(ttransform.GetComponent<Tower>());
+		Destroy(ttransform.GetComponent<AudioSource>());
 		ttransform.parent = previewWindow.transform;
 		ttransform.gameObject.layer = LayerMask.NameToLayer("UI");
 		ttransform.localScale = new Vector3 (45, 45, 45);

@@ -2,21 +2,24 @@
 using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(NavMeshObstacle))]
 public abstract class Tower : MonoBehaviour {
 
 	[Header("Tower")]
 	public string towerName;
+	public GameObject mainTurret;
 	public int price;
 	public float attackSpeed;
 	protected float nextAttackTime;
 	public float range;
+	public float idleRotationSpeed;
 
 	[Header("Sound")]
-	public AudioClip fireSound;
-	[Range(0,1)] public float fireLowRange;
-	[Range(0,1)] public float fireHighRange;
-	[Range(0,2)] public float lowPitchRange;
-	[Range(0,2)] public float highPitchRange;
+	public AudioClip attackSound;
+	[Range(0,1)] public float fireLowRange = 0.5f;
+	[Range(0,1)] public float fireHighRange = 1f;
+	[Range(0,2)] public float lowPitchRange = 0.75f;
+	[Range(0,2)] public float highPitchRange = 1.25f;
 
 	[Header("Bullet")]
 	public Transform muzzle;
@@ -28,9 +31,10 @@ public abstract class Tower : MonoBehaviour {
 	protected AudioSource audioSource;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		myPosition = this.transform.position;
 		audioSource = GetComponent<AudioSource> ();
+		GetComponent<NavMeshObstacle> ().carving = true;
 	}
 	
 	// Update is called once per frame
@@ -44,7 +48,7 @@ public abstract class Tower : MonoBehaviour {
 			float vol = Random.Range (fireLowRange, fireHighRange);
 			float pitch = Random.Range (lowPitchRange, highPitchRange);
 			audioSource.pitch = pitch;
-			audioSource.PlayOneShot(fireSound, vol);
+			audioSource.PlayOneShot(attackSound, vol);
 		}
 	}
 

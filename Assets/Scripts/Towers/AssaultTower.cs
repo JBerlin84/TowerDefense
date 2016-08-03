@@ -8,6 +8,8 @@ public class AssaultTower : Tower {
         //TODO: Play idle animation of tower.
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
+		mainTurret.transform.Rotate (Vector3.up * Time.deltaTime * idleRotationSpeed);
+
         if (enemies.Length > 0)
         {
             for (int i = 0; i < enemies.Length; i++)
