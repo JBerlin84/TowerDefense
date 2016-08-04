@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 2100000, guid: f0a8447179253254aa9c2e5b08d2c828, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4067de1a02072244798361060c5e7325, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -4376,7 +4376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHP: 50
-  startResources: 5
+  startResources: 5000
 --- !u!114 &158649985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,9 +4390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   t1: {fileID: 11470720, guid: c6ff4fefa3675524e9a9c9a9f5667cae, type: 2}
   t2: {fileID: 11441840, guid: 8c072b2e966c7974aa8136a7f48cad7e, type: 2}
-  t3: {fileID: 0}
-  t4: {fileID: 0}
-  t5: {fileID: 0}
+  t3: {fileID: 11488896, guid: 258deaef649eece4485231e24522168c, type: 2}
+  t4: {fileID: 11461352, guid: 53f9e98e6f41dee4284857bf85bb94a3, type: 2}
+  t5: {fileID: 11410550, guid: 4af31e2c27153634d9585b3225d42a82, type: 2}
   t6: {fileID: 0}
   t7: {fileID: 0}
   t8: {fileID: 0}
