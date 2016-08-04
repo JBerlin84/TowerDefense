@@ -20,6 +20,12 @@ public class Minigun : Tower {
 					// Enemy is within distance of turret, aim at enemy
 					Vector3 target = enemies[i].transform.position;
 					target.y = muzzle.transform.position.y;
+
+					// Rotate tower towards enemy
+					Vector3 relativePos = target - transform.position;
+					relativePos.y = transform.position.y;
+					mainTurret.transform.rotation = Quaternion.LookRotation(relativePos);
+
 					muzzle.LookAt(target);
 					Debug.DrawLine(muzzle.transform.position, target);
 
