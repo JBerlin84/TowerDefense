@@ -552,7 +552,7 @@ MonoBehaviour:
   attackSpeed: 0.1
   range: 8
   idleRotationSpeed: 50
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 80e397195ea2940b69ee7bdbded856a5, type: 3}
   fireLowRange: 0.5
   fireHighRange: 1
   lowPitchRange: 0.75
