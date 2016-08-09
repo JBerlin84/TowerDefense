@@ -21,7 +21,10 @@ public class Enemy : MonoBehaviour {
 	public int value;
 	public float hp;
 	public float speed;
+
+	[Header("Enemy visual params")]
 	public float scale;
+	public Vector3 spawnRotation;
 	//bool dead;
 
 	public System.Action<int> OnKilled;
@@ -36,7 +39,7 @@ public class Enemy : MonoBehaviour {
 		cCollider = GetComponent<CapsuleCollider> ();
 		cCollider.isTrigger = true;
 
-
+		transform.rotation = Quaternion.Euler (spawnRotation);
 		transform.localScale = transform.localScale * scale;
 	}
 	
