@@ -6,9 +6,11 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Enemy : MonoBehaviour {
 
 	NavMeshAgent pathfinder;
+	CapsuleCollider cCollider;
 	Transform target;
 
 	[Header("AI")]
@@ -18,7 +20,7 @@ public class Enemy : MonoBehaviour {
 	[Header("Enemy variables")]
 	public int value;
 	public float hp;
-	public int speed;
+	public float speed;
 	public float scale;
 	//bool dead;
 
@@ -30,6 +32,11 @@ public class Enemy : MonoBehaviour {
 		pathfinder = GetComponent<NavMeshAgent> ();
 		target = GameObject.FindGameObjectWithTag ("Finish").transform;
 		pathfinder.speed = speed;
+
+		cCollider = GetComponent<CapsuleCollider> ();
+		cCollider.isTrigger = true;
+
+
 		transform.localScale = transform.localScale * scale;
 	}
 	
