@@ -43,7 +43,6 @@ public class Projectile : MonoBehaviour {
 	}
 
 	void OnHitObject(RaycastHit hit) {
-		
 		GameObject target = hit.collider.gameObject;
 		if (target.tag.Equals("Enemy")) {
 			target.GetComponent<Enemy> ().TakeHit (damage, hit);
