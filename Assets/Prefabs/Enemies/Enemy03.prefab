@@ -11,7 +11,7 @@ GameObject:
   - 195: {fileID: 19553528}
   - 136: {fileID: 13604910}
   - 114: {fileID: 11438374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy03
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 496976}
   - 33: {fileID: 3389888}
   - 23: {fileID: 2337536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object244
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 456694}
   - 33: {fileID: 3378196}
   - 23: {fileID: 2360562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object239
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 476836}
   - 33: {fileID: 3358176}
   - 23: {fileID: 2381432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: k014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 4: {fileID: 443696}
   - 33: {fileID: 3323540}
   - 23: {fileID: 2396542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object245
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - 4: {fileID: 453662}
   - 33: {fileID: 3348242}
   - 23: {fileID: 2331596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object242
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - 4: {fileID: 402630}
   - 33: {fileID: 3319238}
   - 23: {fileID: 2370606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object243
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - 4: {fileID: 415050}
   - 33: {fileID: 3353318}
   - 23: {fileID: 2358796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object240
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - 4: {fileID: 420974}
   - 33: {fileID: 3326456}
   - 23: {fileID: 2346854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object199
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   - 4: {fileID: 477186}
   - 33: {fileID: 3399466}
   - 23: {fileID: 2341780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object241
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 475118}
   - 95: {fileID: 9596250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: apc_b3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

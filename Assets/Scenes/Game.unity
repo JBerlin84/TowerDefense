@@ -3945,7 +3945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHP: 50
-  startResources: 5000
+  startResources: 1
 --- !u!114 &158649985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16416,6 +16416,10 @@ Prefab:
     - target: {fileID: 468392, guid: 7de4663f47c55344988b68298df555b4, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421526, guid: 7de4663f47c55344988b68298df555b4, type: 2}
+      propertyPath: waves.Array.data[0].enemyCount
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7de4663f47c55344988b68298df555b4, type: 2}

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410384}
   - 33: {fileID: 3381144}
   - 23: {fileID: 2362040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 497968}
   - 33: {fileID: 3356864}
   - 23: {fileID: 2321270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 488256}
   - 33: {fileID: 3325832}
   - 23: {fileID: 2329742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 430442}
   - 33: {fileID: 3313472}
   - 23: {fileID: 2397076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 489908}
   - 33: {fileID: 3361972}
   - 23: {fileID: 2347308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kbr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - 195: {fileID: 19597336}
   - 136: {fileID: 13652528}
   - 114: {fileID: 11405484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy25
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414310}
   - 95: {fileID: 9593550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bagi_plaz_r1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

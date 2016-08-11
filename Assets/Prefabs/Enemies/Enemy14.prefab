@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 488394}
   - 33: {fileID: 3320962}
   - 23: {fileID: 2389560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ram032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 195: {fileID: 19582328}
   - 136: {fileID: 13675708}
   - 114: {fileID: 11429732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy14
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 463850}
   - 33: {fileID: 3341424}
   - 23: {fileID: 2391292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rz008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 423442}
   - 33: {fileID: 3318242}
   - 23: {fileID: 2389238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object285
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 4: {fileID: 411796}
   - 33: {fileID: 3336836}
   - 23: {fileID: 2390270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object287
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - 4: {fileID: 465066}
   - 33: {fileID: 3375238}
   - 23: {fileID: 2395868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object215
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - 4: {fileID: 497960}
   - 33: {fileID: 3379250}
   - 23: {fileID: 2368328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: anten002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - 4: {fileID: 467208}
   - 33: {fileID: 3347348}
   - 23: {fileID: 2333694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: k028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453312}
   - 95: {fileID: 9582282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: apc_rz2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - 4: {fileID: 469692}
   - 33: {fileID: 3377220}
   - 23: {fileID: 2320344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object286
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - 4: {fileID: 400612}
   - 33: {fileID: 3383446}
   - 23: {fileID: 2371134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: far021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - 4: {fileID: 413282}
   - 33: {fileID: 3331682}
   - 23: {fileID: 2350000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object284
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - 4: {fileID: 492126}
   - 33: {fileID: 3397708}
   - 23: {fileID: 2310498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object288
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - 4: {fileID: 470014}
   - 33: {fileID: 3394012}
   - 23: {fileID: 2344402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: k031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - 4: {fileID: 444510}
   - 33: {fileID: 3321842}
   - 23: {fileID: 2377042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object289
   m_TagString: Untagged
   m_Icon: {fileID: 0}

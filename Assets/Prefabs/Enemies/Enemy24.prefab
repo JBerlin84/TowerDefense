@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 487142}
   - 33: {fileID: 3301576}
   - 23: {fileID: 2345314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ram015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 494666}
   - 33: {fileID: 3376868}
   - 23: {fileID: 2318710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 448914}
   - 33: {fileID: 3309880}
   - 23: {fileID: 2357242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 427956}
   - 33: {fileID: 3304084}
   - 23: {fileID: 2314232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 498004}
   - 33: {fileID: 3326764}
   - 23: {fileID: 2396538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kbb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 497972}
   - 33: {fileID: 3392674}
   - 23: {fileID: 2336732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 433468}
   - 95: {fileID: 9568668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bagi_plaz_b2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 195: {fileID: 19537124}
   - 136: {fileID: 13685410}
   - 114: {fileID: 11475966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy24
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - 4: {fileID: 465714}
   - 33: {fileID: 3384964}
   - 23: {fileID: 2388592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

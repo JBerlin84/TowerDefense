@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 424140}
   - 33: {fileID: 3358026}
   - 23: {fileID: 2380250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object231
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 465274}
   - 33: {fileID: 3334172}
   - 23: {fileID: 2369530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object228
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 195: {fileID: 19502870}
   - 136: {fileID: 13674160}
   - 114: {fileID: 11404048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 431120}
   - 33: {fileID: 3378332}
   - 23: {fileID: 2318190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 4: {fileID: 412086}
   - 33: {fileID: 3345848}
   - 23: {fileID: 2343182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object230
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - 4: {fileID: 432222}
   - 33: {fileID: 3338324}
   - 23: {fileID: 2394428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object225
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411404}
   - 95: {fileID: 9542528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: apc_b1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 452668}
   - 33: {fileID: 3365700}
   - 23: {fileID: 2334294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object226
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - 4: {fileID: 470032}
   - 33: {fileID: 3381606}
   - 23: {fileID: 2323140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: k017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - 4: {fileID: 437736}
   - 33: {fileID: 3379498}
   - 23: {fileID: 2327420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object227
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - 4: {fileID: 420692}
   - 33: {fileID: 3301926}
   - 23: {fileID: 2390980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Object229
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &19502870

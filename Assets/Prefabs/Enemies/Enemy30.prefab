@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 484334}
   - 33: {fileID: 3397110}
   - 23: {fileID: 2379310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kbb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 458882}
   - 33: {fileID: 3387862}
   - 23: {fileID: 2358104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428014}
   - 95: {fileID: 9586388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bagi_roket_b2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 195: {fileID: 19544506}
   - 136: {fileID: 13651990}
   - 114: {fileID: 11413680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy30
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 471196}
   - 33: {fileID: 3340274}
   - 23: {fileID: 2375082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 404972}
   - 33: {fileID: 3343960}
   - 23: {fileID: 2373434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 4: {fileID: 463024}
   - 33: {fileID: 3376974}
   - 23: {fileID: 2396646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 439926}
   - 33: {fileID: 3301120}
   - 23: {fileID: 2382984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tire 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
