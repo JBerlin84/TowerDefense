@@ -105,112 +105,112 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyCount: 1
+  - enemyCount: 10
     timeBetweenSpawns: 1
     enemy: {fileID: 11404048, guid: 01e4f9586b5be6a4c8033cf223d9f79d, type: 2}
-  - enemyCount: 1
+  - enemyCount: 15
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11473592, guid: 5345b93765518c745a48a25c867fe573, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11438374, guid: a7eca5e1cc3888f42954d46f694f21e6, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11459714, guid: 26271883cdb018d4db4c8298998a9d24, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11430248, guid: 0550b72ed8976cf41bef0c0d8c5ed1d2, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11400806, guid: a0d6612ffb189ca4193ceb4371a99416, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11460718, guid: 4a2aaafc09a188b4799d80735c605d09, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11470970, guid: 59c0da20a4966144e88ea0dc702f3139, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11416216, guid: f5814b9636e4a5f46a1d7faa6ca41dc4, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11471440, guid: fc6db9f13a4b5184cafa14d0f8f33663, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11403004, guid: 0071deed02ed138499a1fe5f7f22ce34, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11471584, guid: 720395d5007ddf84c9acc3318a0863f6, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11478252, guid: 7e3b00c51ff307440ae8c65b156361ca, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11429732, guid: f219489b5eedd224abd9e36db8b266ac, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11403900, guid: 1ff3e2dc99365064191b52fd6b22ab2b, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11480192, guid: 867c290a3e7bfd44daecd5001c81baf9, type: 2}
-  - enemyCount: 1
+  - enemyCount: 20
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11468918, guid: 1b2d3d714282f5d41a36bd022d5792fd, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11433108, guid: 28db60483b369d245ade2e82fd38db97, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11420830, guid: a66dddffbf7fbcf449051a72255143a5, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11475658, guid: 16880a1b1601dc54eaf0bcc28cbac23a, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11427948, guid: 5dbb84c9db54f4f4399f4865cd21b735, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11499978, guid: f855573a4d57bd04fa20da5589c2b757, type: 2}
-  - enemyCount: 1
+  - enemyCount: 25
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11422932, guid: 54d056c52119b3f4c9ec7a2eb4b5b613, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11475966, guid: 3facf8e82a646974dbcdac30c1c9bc44, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11405484, guid: a9600c6a02520e64882ebbf231d74e43, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11428012, guid: e53b11d1561bcb54d925d2dd469a2e96, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11447684, guid: ef9b705b7f27a27439435605f72b4826, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11472014, guid: f099a80e51ad91749b8a14b3a1d1dccc, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11429040, guid: ee34221330c8c6a4fb00aced01417c7d, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11413680, guid: 7b18f0bb853b1a9459cede1fa7e86309, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11467968, guid: 0cf9d27794e90414d9fab7bece67e1de, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11474206, guid: 566a81fcf3dfce145b028962b2ba64e7, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11436404, guid: f6ede0dd5fbfca94292e4ff07e7e8921, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11410398, guid: 161a39a09c192454399fd7ee9723cffc, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11467702, guid: 4908db54c393bcb43a42cca72dd0cb89, type: 2}
-  - enemyCount: 1
+  - enemyCount: 30
     timeBetweenSpawns: 0.75
     enemy: {fileID: 11479930, guid: bffa5646a89f0fa4eb032e92c8a54958, type: 2}
 --- !u!1001 &100100000
