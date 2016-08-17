@@ -16,12 +16,12 @@ public class Projectile : MonoBehaviour {
 		get { return lifetime; }
 	}
 
-	void Start() {
+	protected virtual void Start() {
 		killtime = Time.time + lifetime;
 	}
 
 	// Update is called once per frame
-	void Update () {
+	protected virtual void Update () {
 		float distanceToTravel = speed * Time.deltaTime;
 
 		CheckCollision (distanceToTravel);
