@@ -178,6 +178,7 @@ public class PauseMenu : MonoBehaviour {
 	/// </summary>
 	void SaveGraphicsSettings() {
 		// Graphics settings
+
 		PlayerPrefs.SetInt ("resolutionDropdown", resolutionDropdown.value);	// TODO: this needs to take into account the text, not index.
 		PlayerPrefs.SetInt ("fullscreenToggle",fullscreenToggle.isOn?1:0);
 		PlayerPrefs.SetInt ("textureQualityDropdown", textureQualityDropdown.value);

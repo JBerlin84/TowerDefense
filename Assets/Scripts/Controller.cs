@@ -87,13 +87,27 @@ public class Controller : MonoBehaviour {
 			if (uiController.IsATowerChosen ()) {
 				uiController.ClearSelectedTower ();
 			} else if (pauseMenu.IsDisplaying) {
-				Time.timeScale = 1f;
-				pauseMenu.Close ();
+				HideMenuPanel ();
 			} else {
-				Time.timeScale = 0f;
-				pauseMenu.Display ();
+				DisplayMenuPanel ();
 			}
 		}
+	}
+
+	/// <summary>
+	/// Displaies the menu panel and pauses the game.
+	/// </summary>
+	public void DisplayMenuPanel() {
+		Time.timeScale = 0f;
+		pauseMenu.Display ();
+	}
+
+	/// <summary>
+	/// Hides the menu panel and unpauses the game.
+	/// </summary>
+	public void HideMenuPanel() {
+		Time.timeScale = 1f;
+		pauseMenu.Close ();
 	}
 
 	/// <summary>
