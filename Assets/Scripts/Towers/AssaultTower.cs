@@ -6,33 +6,33 @@ public class AssaultTower : Tower {
 	// Update is called once per frame
 	protected override void Update () {
         //TODO: Play idle animation of tower.
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
 		mainTurret.transform.Rotate (Vector3.up * Time.deltaTime * idleRotationSpeed);
 
-        if (enemies.Length > 0)
-        {
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                float distance = Vector3.Distance(myPosition, enemies[i].transform.position);
-                if (distance < range)
-                {
-                    // Enemy is within distance of turret, aim at enemy
-                    Vector3 target = enemies[i].transform.position;
-                    target.y = muzzle.transform.position.y;
+		if (Time.time > nextAttackTime) {
+			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
-					// Rotate tower towards enemy
-					Vector3 relativePos = target - transform.position;
-					relativePos.y = transform.position.y;
-					mainTurret.transform.rotation = Quaternion.LookRotation(relativePos);
+			if (enemies.Length > 0) {
+				for (int i = 0; i < enemies.Length; i++) {
+					float distance = Vector3.Distance (myPosition, enemies [i].transform.position);
+					if (distance < range) {
+						// Enemy is within distance of turret, aim at enemy
+						Vector3 target = enemies [i].transform.position;
+						target.y = muzzle.transform.position.y;
 
-					muzzle.LookAt(target);
-                    Debug.DrawLine(muzzle.transform.position, target);
+						// Rotate tower towards enemy
+						Vector3 relativePos = target - transform.position;
+						relativePos.y = transform.position.y;
+						mainTurret.transform.rotation = Quaternion.LookRotation (relativePos);
 
-                    Fire();
-                    break;
-                }
-            }
+						muzzle.LookAt (target);
+						Debug.DrawLine (muzzle.transform.position, target);
+
+						Fire ();
+						break;
+					}
+				}
+			}
         }
 	}
 
