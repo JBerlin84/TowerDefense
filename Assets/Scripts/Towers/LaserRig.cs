@@ -29,21 +29,27 @@ public class LaserRig : Tower {
 					muzzle.LookAt(target);
 					Debug.DrawLine(muzzle.transform.position, target);
 
-					Fire();
+					Fire(muzzle.transform, enemies[i]);
 					break;
 				}
 			}
 		}
 	}
 
-	protected override void Fire() {
+	void Fire(Transform muzzleTarget, GameObject hitTarget) {
 		base.Fire ();
 
 		if (Time.time > nextAttackTime)
 		{
-			Projectile newProjectile = Instantiate(projectile, muzzle.position, muzzle.rotation) as Projectile;
-			newProjectile.speed *= speedBonus;
-			newProjectile.damage *= damageBonus;
+			Laser newLaser = Instantiate(projectile, muzzle.position, muzzle.rotation) as Laser;
+			newLaser.speed *= speedBonus;
+			newLaser.damage *= damageBonus;
+
+			newLaser.startPosition = muzzle.position;
+			newLaser.endPosition = hitTarget.transform.position;
+			newLaser.hitTarget = hitTarget.GetComponent<Enemy> ();
+			newLaser.muzzleTarget = muzzleTarget;
+
 			nextAttackTime = Time.time + attackSpeed;
 		}
 	}

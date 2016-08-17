@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour {
 	public float damage;
 	public float lifetime;
 
-	float killtime;
+	protected float killtime;
 
 	public float Lifetime {
 		get { return lifetime; }

@@ -529,7 +529,7 @@ MonoBehaviour:
   lowPitchRange: 0.75
   highPitchRange: 1.25
   muzzle: {fileID: 452390}
-  projectile: {fileID: 11482398, guid: 1b4c66be0b69a2b4c930cca182901eaa, type: 2}
+  projectile: {fileID: 11436398, guid: fcc7b8a53155a80448a29dc391ef5368, type: 2}
   speedBonus: 1
   damageBonus: 15
 --- !u!208 &20845914

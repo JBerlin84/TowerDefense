@@ -47,10 +47,11 @@ MonoBehaviour:
   projectileName: Laser
   speed: -1
   damage: 10
-  lifetime: 1
+  lifetime: 0.1
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 2, y: 2, z: 2}
   hitTarget: {fileID: 0}
+  muzzleTarget: {fileID: 0}
   startSize: 0.2
   endSize: 0.1
   startColor: {r: 1, g: 0, b: 0, a: 0}

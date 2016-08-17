@@ -8,6 +8,7 @@ public class Laser : Projectile {
 	public Vector3 startPosition;
 	public Vector3 endPosition;
 	public Enemy hitTarget;
+	public Transform muzzleTarget;
 	public float startSize;
 	public float endSize;
 	public Color startColor;
@@ -28,6 +29,10 @@ public class Laser : Projectile {
 	}
 
 	protected override void Update() {
+		if (Time.time > killtime) {
+			GameObject.Destroy (gameObject);
+		}
+
 		if (!haveBeenHit) {
 			if (hitTarget) {
 				hitTarget.TakeHit (damage, new RaycastHit());
@@ -36,7 +41,9 @@ public class Laser : Projectile {
 		}
 
 		// Update position
-		lineRenderer.SetPosition (0, startPosition);
-		lineRenderer.SetPosition (1, endPosition);
+		if(muzzleTarget)
+			lineRenderer.SetPosition (0, muzzleTarget.transform.position);
+		if(hitTarget)
+			lineRenderer.SetPosition (1, hitTarget.transform.position);
 	}
 }
