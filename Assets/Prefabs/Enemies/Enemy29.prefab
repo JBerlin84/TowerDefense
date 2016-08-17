@@ -474,9 +474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathfindingRefreshRate: 0.25
-  value: 1
-  hp: 1
-  speed: 3
+  value: 100
+  hp: 5000
+  speed: 5
   scale: 1
   spawnRotation: {x: 0, y: 180, z: 0}
 --- !u!136 &13628946
